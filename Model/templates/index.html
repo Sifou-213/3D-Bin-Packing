@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hybrid GA Container Loading</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Plotly.js CDN -->
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js" charset="utf-8"></script>
+</head>
+<body>
+    <button id="api-docs-open-btn" title="API Documentation">API Docs</button>
+
+    <div id="api-docs-panel">
+        <button id="api-docs-close-btn">&times;</button>
+        <h2>API Integration Guide</h2>
+        <div id="api-docs-content-area">
+            <!-- API Documentation will be loaded here by JavaScript or written directly -->
+        </div>
+    </div>
+    
+    <div class="container">
+        <h1>Container Loading Problem Solver</h1>
+
+        <div class="input-section">
+            <h2>Container Dimensions</h2>
+            <div class="form-group">
+                <label for="truck-selector">Select Truck:</label>
+                <select id="truck-selector" name="truck-selector">
+                    <option value="">-- Manually Enter Dimensions --</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="container-dc">Depth (dc):</label>
+                <input type="number" id="container-dc" value="10" step="any">
+            </div>
+            <div class="form-group">
+                <label for="container-wc">Width (wc):</label>
+                <input type="number" id="container-wc" value="5" step="any">
+            </div>
+            <div class="form-group">
+                <label for="container-hc">Height (hc):</label>
+                <input type="number" id="container-hc" value="8" step="any">
+            </div>
+
+            <h2>Boxes</h2>
+            <div id="boxes-input-area">
+                <!-- Box inputs will be added here by JS -->
+            </div>
+            <button id="add-box-btn">Add Box</button>
+            <button id="load-sample-boxes-btn">Load Sample Boxes</button>
+
+
+            <h2>GA Parameters (Optional)</h2>
+            <div class="form-group">
+                <label for="ga-npop">Population Size (npop):</label>
+                <input type="number" id="ga-npop" value="50" placeholder="e.g., 50">
+            </div>
+             <div class="form-group">
+                <label for="ga-nrep">Elitism Count (nrep):</label>
+                <input type="number" id="ga-nrep" value="10" placeholder="e.g., 10">
+            </div>
+             <div class="form-group">
+                <label for="ga-nmerge">Merger Mutations (nmerge):</label>
+                <input type="number" id="ga-nmerge" value="10" placeholder="e.g., 10">
+            </div>
+            <div class="form-group">
+                <label for="ga-max-gens">Max Generations:</label>
+                <input type="number" id="ga-max-gens" value="50" placeholder="e.g., 50-500">
+            </div>
+             <div class="form-group">
+                <label for="ga-max-time">Max Time (seconds):</label>
+                <input type="number" id="ga-max-time" value="30" placeholder="e.g., 30-500">
+            </div>
+
+
+            <button id="solve-btn">Solve and Visualize</button>
+        </div>
+
+        <div id="loading-indicator" style="display:none;">
+            <p>Solving... Please wait. This might take a minute.</p>
+            <div class="spinner"></div>
+        </div>
+        
+        <div id="error-message" class="error-message" style="display:none;"></div>
+
+        <div class="results-section">
+            <h2>Results</h2>
+            <div id="metrics-summary">
+                <!-- Metrics will be displayed here -->
+            </div>
+            <div id="layer-metrics-details">
+                <!-- Detailed layer metrics -->
+            </div>
+            <h2>Layer Visualizations</h2>
+            <div id="visualizations-area">
+                <!-- Visualizations will be added here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
