@@ -1,0 +1,12 @@
+# Render.com blueprint: New > Blueprint > pick this repository.
+services:
+  - type: web
+    name: colis
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    # One worker so the in-memory state stays simple; threads keep the site responsive while a plan is computed.
+    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT --workers 1 --threads 4 --timeout 180
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.9

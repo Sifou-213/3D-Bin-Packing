@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+shipment_results_archive/
+.claude/

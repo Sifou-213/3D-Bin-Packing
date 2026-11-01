@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <style>
+    .tile { fill: #000; }
+    .box { fill: #fff; }
+    .tape { fill: #000; }
+    /* Dark browser tabs: light tile so the icon stays visible */
+    @media (prefers-color-scheme: dark) {
+      .tile { fill: #F2F3F5; }
+      .box { fill: #0D0F12; }
+      .tape { fill: #F2F3F5; }
+    }
+  </style>
+  <rect class="tile" width="100" height="100" rx="22"/>
+  <path class="box" d="M50 18 L82 34 L50 50 L18 34 Z"/>
+  <path class="box" d="M16 38.5 L47.5 54 L47.5 86 L16 70.5 Z"/>
+  <path class="box" d="M52.5 54 L84 38.5 L84 70.5 L52.5 86 Z"/>
+  <path class="tape" d="M59 22.5 L68.5 27.25 L37.5 42.75 L28 38 Z"/>
+  <path class="tape" d="M28 43.5 L37.5 48.2 L37.5 62 L32.75 58 L28 60 Z"/>
+</svg>

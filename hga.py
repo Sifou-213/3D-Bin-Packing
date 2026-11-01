@@ -1,8 +1,10 @@
 import copy
+import itertools
 import numpy as np
 import random
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d.art3d import Poly3DCollection
+from matplotlib.widgets import Button
 import sys
 import copy
 import time 
@@ -19,12 +21,16 @@ class hybrid_GA:
 
     # Box data:
     class box:
-        def __init__(self, id, db, wb, hb, vb, allowed_orientations=None): # Added allowed_orientations
+        def __init__(self, id, db, wb, hb, vb, allowed_orientations=None, name="N/A", original_type_id="N/A", weight=0, load_bearing_strength=float('inf')): # Added name, original_type_id, weight, lbs
             self.id = id
             self.db = db
             self.wb = wb
             self.hb = hb
             self.vb = vb
+            self.name = name  # Name of the box type
+            self.original_type_id = original_type_id # ID from shipment setup (e.g., "B1")
+            self.weight = weight # Weight of the box itself
+            self.load_bearing_strength = load_bearing_strength # Max weight this box can support on top
             # If allowed_orientations is None or empty, default to all 6
             self.allowed_orientations = allowed_orientations if allowed_orientations and isinstance(allowed_orientations, list) and all(isinstance(x, int) for x in allowed_orientations) else list(range(1, 7))
 
@@ -316,24 +322,21 @@ class hybrid_GA:
             scurr = SStack.pop()
 
             if scurr['placed_box'] is None: # If space is empty, try to fill it
-                fit_found = any( # Check if any box in Bfree can fit in scurr in any rotation
-                    any(
-                        (dx_rot <= scurr['dimensions'][0] + 1e-6 and # Add tolerance
-                         dy_rot <= scurr['dimensions'][1] + 1e-6 and
-                         dz_rot <= scurr['dimensions'][2] + 1e-6)
-                        for dx_rot, dy_rot, dz_rot in ( # Iterate through rotations for each box
-                            self.get_rotated_dimensions(self.boxes_by_id[box_id], rot_id) # Use boxes_by_id
-                            for rot_id in range(1, 7)
-                        )
-                    )
-                    for box_id in updated_Bfree
+                # Check if any box in Bfree can fit in scurr in any rotation (each distinct size checked once)
+                sdx, sdy, sdz = scurr['dimensions']
+                free_sizes = {(self.boxes_by_id[box_id].db, self.boxes_by_id[box_id].wb, self.boxes_by_id[box_id].hb)
+                              for box_id in updated_Bfree}
+                fit_found = any(
+                    dx_rot <= sdx + 1e-6 and dy_rot <= sdy + 1e-6 and dz_rot <= sdz + 1e-6
+                    for size in free_sizes
+                    for dx_rot, dy_rot, dz_rot in itertools.permutations(size)
                 )
 
                 if fit_found:
                     # Pass layer_abs_x_start and layer depth 'd' for boundary checks
                     current_placement_tuple, daughter_placement_tuple, _ = self.determine_placings(
                         scurr, updated_Bfree, self.current_generation, self.total_generations,
-                        layer_abs_x_start, d
+                        layer_abs_x_start, d, l.Pl
                     )
 
                     if current_placement_tuple:
@@ -525,22 +528,33 @@ class hybrid_GA:
         }
 
     def determine_placings(self, scurr, Bfree, current_generation, total_generations,
-                           layer_abs_x_start, layer_depth_d): # Added layer boundary params
+                           layer_abs_x_start, layer_depth_d, existing_placings): # Added layer boundary params
         use_rule_31 = (current_generation / total_generations) <= 0.5 if total_generations > 0 else True
         best_placement_info = None
         best_eval_score = (-1, float('inf')) # (volume, priority_metric: smaller is better)
 
-        box_ids = list(Bfree) # Consider only boxes currently free for this layer
-        for i in range(len(box_ids)):
-            # box1 = self.box_list[box_ids[i]-1] # Old way
-            box1 = self.boxes_by_id.get(box_ids[i])
-            if not box1: continue
+        # Identical boxes (same dimensions, orientations, weight and load bearing strength) give
+        # identical placements, so only one representative per kind is evaluated, plus a second
+        # one of the same kind for pairs. This turns an O(n^2) scan over box instances into an
+        # O(k^2) scan over box kinds, which is what makes large shipments solvable in seconds.
+        kinds = {}
+        for box_id in Bfree:
+            b = self.boxes_by_id.get(box_id)
+            if not b: continue
+            sig = (b.db, b.wb, b.hb, tuple(b.allowed_orientations), b.weight, b.load_bearing_strength)
+            group = kinds.setdefault(sig, [])
+            if len(group) < 2:
+                group.append(b)
+        kind_groups = list(kinds.values())
+
+        for i in range(len(kind_groups)):
+            box1 = kind_groups[i][0]
             # Single box placement
             for rot1_id in range(1, 7):
                 if rot1_id not in box1.allowed_orientations: # New check
                     continue
                 placement = self._evaluate_placement(scurr, box1, None, self.rv(rot1_id), None, use_rule_31,
-                                                     layer_abs_x_start, layer_depth_d)
+                                                     layer_abs_x_start, layer_depth_d, existing_placings)
                 if placement:
                     current_score = (placement['volume'], placement['priority'])
                     if best_placement_info is None or \
@@ -548,11 +562,14 @@ class hybrid_GA:
                        (abs(current_score[0] - best_eval_score[0]) < 1e-6 and current_score[1] < best_eval_score[1]):
                         best_eval_score = current_score
                         best_placement_info = placement
-            # Paired box placement
-            for j in range(i + 1, len(box_ids)):
-                box2 = self.boxes_by_id.get(box_ids[j]) # Fetch box2 once for each j
-                if not box2: continue
-                
+            # Paired box placement (j == i pairs two boxes of the same kind)
+            for j in range(i, len(kind_groups)):
+                if j == i:
+                    if len(kind_groups[i]) < 2: continue
+                    box2 = kind_groups[i][1]
+                else:
+                    box2 = kind_groups[j][0]
+
                 for rot1_id in range(1, 7):
                     if rot1_id not in box1.allowed_orientations: # New check for box1
                         continue
@@ -560,7 +577,7 @@ class hybrid_GA:
                         if rot2_id not in box2.allowed_orientations: # New check for box2
                             continue
                         placement = self._evaluate_placement(scurr, box1, box2, self.rv(rot1_id), self.rv(rot2_id), use_rule_31,
-                                                             layer_abs_x_start, layer_depth_d)
+                                                             layer_abs_x_start, layer_depth_d, existing_placings)
                         if placement:
                             current_score = (placement['volume'], placement['priority'])
                             if best_placement_info is None or \
@@ -621,7 +638,7 @@ class hybrid_GA:
         pass
 
     def _evaluate_placement(self, scurr, box1, box2, rv1, rv2, use_rule_31,
-                            layer_abs_x_start, layer_depth_d): # Added layer boundary params
+                            layer_abs_x_start, layer_depth_d, existing_placings): # Added layer boundary params
         dims1 = self.get_rotated_dimensions(box1, rv1.rotation_id)
         dims2 = self.get_rotated_dimensions(box2, rv2.rotation_id) if box2 else (0,0,0)
         s_dx, s_dy, s_dz = scurr['dimensions'] # Dimensions of the residual space
@@ -646,18 +663,34 @@ class hybrid_GA:
             box1_abs_end_z = s_oz + dims1[2]
 
             fits_globally_s1 = (
-                box1_abs_end_x <= layer_abs_x_start + layer_depth_d + tol and # Within layer depth
-                box1_abs_end_y <= self.container.wc + tol and                 # Within container width
-                box1_abs_end_z <= self.container.hc + tol and                 # Within container height
-                s_ox >= layer_abs_x_start - tol and                           # Space starts at/after layer's X start
-                s_oy >= 0 - tol and                                           # Space starts at/after Y=0
-                s_oz >= 0 - tol                                               # Space starts at/after Z=0
+                box1_abs_end_x < layer_abs_x_start + layer_depth_d + tol and # Strictly within layer depth
+                box1_abs_end_y < self.container.wc + tol and                 # Strictly within container width
+                box1_abs_end_z < self.container.hc + tol and                 # Strictly within container height
+                s_ox >= layer_abs_x_start - tol and                          # Space starts at/after layer's X start
+                s_oy >= 0 - tol and                                          # Space starts at/after Y=0
+                s_oz >= 0 - tol                                             # Space starts at/after Z=0
             )
             if fits_globally_s1:
-                priority_single = (s_dx - dims1[0]) + (s_dy - dims1[1]) + (s_dz - dims1[2]) # Smaller residual is better
-                valid_variants.append({'stype': 'single', 'priority': priority_single, 'vol': box1.vb,
-                                       'b1': box1, 'r1': rv1, 'd1': dims1,
-                                       'b2': None, 'r2': None, 'd2': (0,0,0)})
+                # --- Collision Check ---
+                is_colliding = False
+                cand_x, cand_y, cand_z = s_ox, s_oy, s_oz
+                cand_dx, cand_dy, cand_dz = dims1
+                for ep in existing_placings:
+                    ep_box = self.boxes_by_id[ep.id]
+                    ep_dims = self.get_rotated_dimensions(ep_box, ep.rv.rotation_id)
+                    ex_x, ex_y, ex_z = ep.ox, ep.oy, ep.oz
+                    ex_dx, ex_dy, ex_dz = ep_dims
+                    
+                    if (cand_x < ex_x + ex_dx - tol and cand_x + cand_dx > ex_x + tol and
+                        cand_y < ex_y + ex_dy - tol and cand_y + cand_dy > ex_y + tol and
+                        cand_z < ex_z + ex_dz - tol and cand_z + cand_dz > ex_z + tol):
+                        is_colliding = True
+                        break
+                if not is_colliding:
+                    priority_single = (s_dx - dims1[0]) + (s_dy - dims1[1]) + (s_dz - dims1[2]) # Smaller residual is better
+                    valid_variants.append({'stype': 'single', 'priority': priority_single, 'vol': box1.vb,
+                                           'b1': box1, 'r1': rv1, 'd1': dims1,
+                                           'b2': None, 'r2': None, 'd2': (0,0,0)})
 
         if box2: # If two boxes are being considered
             # Variant Beside (split scurr along its Y-axis)
@@ -672,18 +705,39 @@ class hybrid_GA:
                 pair_abs_end_z = s_oz + max(dims1[2], dims2[2])
 
                 fits_globally_beside = (
-                    pair_abs_end_x <= layer_abs_x_start + layer_depth_d + tol and
-                    pair_abs_end_y <= self.container.wc + tol and
-                    pair_abs_end_z <= self.container.hc + tol and
+                    pair_abs_end_x < layer_abs_x_start + layer_depth_d + tol and
+                    pair_abs_end_y < self.container.wc + tol and
+                    pair_abs_end_z < self.container.hc + tol and
                     s_ox >= layer_abs_x_start - tol and s_oy >= 0 - tol and s_oz >= 0 - tol
                 )
                 if fits_globally_beside:
-                    # Priority: remaining width in scurr if this pair is placed.
-                    # Or, simply s_dy as per paper's R2 (largest dimension of split).
-                    priority_beside = s_dy - (dims1[1] + dims2[1])
-                    valid_variants.append({'stype': 'beside', 'priority': priority_beside, 'vol': box1.vb + box2.vb,
-                                           'b1': box1, 'r1': rv1, 'd1': dims1,
-                                           'b2': box2, 'r2': rv2, 'd2': dims2})
+                    # --- Collision Check for Pair ---
+                    collides = False
+                    b1_coords = (s_ox, s_oy, s_oz)
+                    b2_coords = (s_ox, s_oy + dims1[1], s_oz)
+                    
+                    for ep in existing_placings:
+                        ep_box = self.boxes_by_id[ep.id]
+                        ep_dims = self.get_rotated_dimensions(ep_box, ep.rv.rotation_id)
+                        ex_x, ex_y, ex_z = ep.ox, ep.oy, ep.oz
+                        ex_dx, ex_dy, ex_dz = ep_dims
+                        
+                        # Check box 1
+                        if (b1_coords[0] < ex_x + ex_dx - tol and b1_coords[0] + dims1[0] > ex_x + tol and
+                            b1_coords[1] < ex_y + ex_dy - tol and b1_coords[1] + dims1[1] > ex_y + tol and
+                            b1_coords[2] < ex_z + ex_dz - tol and b1_coords[2] + dims1[2] > ex_z + tol):
+                            collides = True; break
+                        # Check box 2
+                        if (b2_coords[0] < ex_x + ex_dx - tol and b2_coords[0] + dims2[0] > ex_x + tol and
+                            b2_coords[1] < ex_y + ex_dy - tol and b2_coords[1] + dims2[1] > ex_y + tol and
+                            b2_coords[2] < ex_z + ex_dz - tol and b2_coords[2] + dims2[2] > ex_z + tol):
+                            collides = True; break
+                    
+                    if not collides:
+                        priority_beside = s_dy - (dims1[1] + dims2[1])
+                        valid_variants.append({'stype': 'beside', 'priority': priority_beside, 'vol': box1.vb + box2.vb,
+                                               'b1': box1, 'r1': rv1, 'd1': dims1,
+                                               'b2': box2, 'r2': rv2, 'd2': dims2})
 
             # Variant In Front (split scurr along its X-axis)
             # Boxes are one behind the other, combined depth (dims1[0] + dims2[0]) must fit s_dx.
@@ -696,17 +750,39 @@ class hybrid_GA:
                 pair_abs_end_z = s_oz + max(dims1[2], dims2[2])
 
                 fits_globally_front = (
-                    pair_abs_end_x <= layer_abs_x_start + layer_depth_d + tol and
-                    pair_abs_end_y <= self.container.wc + tol and
-                    pair_abs_end_z <= self.container.hc + tol and
+                    pair_abs_end_x < layer_abs_x_start + layer_depth_d + tol and
+                    pair_abs_end_y < self.container.wc + tol and
+                    pair_abs_end_z < self.container.hc + tol and
                     s_ox >= layer_abs_x_start - tol and s_oy >= 0 - tol and s_oz >= 0 - tol
                 )
                 if fits_globally_front:
-                    priority_front = s_dx - (dims1[0] + dims2[0])
-                    valid_variants.append({'stype': 'front', 'priority': priority_front, 'vol': box1.vb + box2.vb,
-                                           'b1': box1, 'r1': rv1, 'd1': dims1,
-                                           'b2': box2, 'r2': rv2, 'd2': dims2})
+                    # --- Collision Check for Pair ---
+                    collides = False
+                    b1_coords = (s_ox, s_oy, s_oz)
+                    b2_coords = (s_ox + dims1[0], s_oy, s_oz)
 
+                    for ep in existing_placings:
+                        ep_box = self.boxes_by_id[ep.id]
+                        ep_dims = self.get_rotated_dimensions(ep_box, ep.rv.rotation_id)
+                        ex_x, ex_y, ex_z = ep.ox, ep.oy, ep.oz
+                        ex_dx, ex_dy, ex_dz = ep_dims
+
+                        # Check box 1
+                        if (b1_coords[0] < ex_x + ex_dx - tol and b1_coords[0] + dims1[0] > ex_x + tol and
+                            b1_coords[1] < ex_y + ex_dy - tol and b1_coords[1] + dims1[1] > ex_y + tol and
+                            b1_coords[2] < ex_z + ex_dz - tol and b1_coords[2] + dims1[2] > ex_z + tol):
+                            collides = True; break
+                        # Check box 2
+                        if (b2_coords[0] < ex_x + ex_dx - tol and b2_coords[0] + dims2[0] > ex_x + tol and
+                            b2_coords[1] < ex_y + ex_dy - tol and b2_coords[1] + dims2[1] > ex_y + tol and
+                            b2_coords[2] < ex_z + ex_dz - tol and b2_coords[2] + dims2[2] > ex_z + tol):
+                            collides = True; break
+
+                    if not collides:
+                        priority_front = s_dx - (dims1[0] + dims2[0])
+                        valid_variants.append({'stype': 'front', 'priority': priority_front, 'vol': box1.vb + box2.vb,
+                                               'b1': box1, 'r1': rv1, 'd1': dims1,
+                                               'b2': box2, 'r2': rv2, 'd2': dims2})
             # Variant Above (split scurr along its Z-axis)
             # Boxes are stacked, combined height (dims1[2] + dims2[2]) must fit s_dz.
             # Stacking condition: top box base must be <= bottom box base.
@@ -716,13 +792,19 @@ class hybrid_GA:
                                   max(dims1[1], dims2[1]) <= s_dy + tol and # Max footprint width
                                   dims1[2] + dims2[2] <= s_dz + tol)       # Combined height
             
-            # Stacking stability (R3.1 in some interpretations, or part of R1/R2)
-            # Box1 on Box2: base of Box1 (d1,w1) <= base of Box2 (d2,w2)
-            can_stack_b1_on_b2 = (dims1[0] <= dims2[0] + tol and dims1[1] <= dims2[1] + tol)
-            # Box2 on Box1: base of Box2 (d2,w2) <= base of Box1 (d1,w1)
-            can_stack_b2_on_b1 = (dims2[0] <= dims1[0] + tol and dims2[1] <= dims1[1] + tol)
+            # Stacking stability: footprint and Load Bearing Strength (LBS)
+            # Check if box1 can be stacked on box2
+            stable_b1_on_b2_footprint = (dims1[0] <= dims2[0] + tol and dims1[1] <= dims2[1] + tol)
+            lbs_valid_b1_on_b2 = box2.load_bearing_strength >= box1.weight
+            is_valid_stack_b1_on_b2 = stable_b1_on_b2_footprint and lbs_valid_b1_on_b2
 
-            if fits_locally_above and (can_stack_b1_on_b2 or can_stack_b2_on_b1):
+            # Check if box2 can be stacked on box1
+            stable_b2_on_b1_footprint = (dims2[0] <= dims1[0] + tol and dims2[1] <= dims1[1] + tol)
+            lbs_valid_b2_on_b1 = box1.load_bearing_strength >= box2.weight
+            is_valid_stack_b2_on_b1 = stable_b2_on_b1_footprint and lbs_valid_b2_on_b1
+            
+            # A valid stacking requires one of these orders to be both footprint and LBS valid
+            if fits_locally_above and (is_valid_stack_b1_on_b2 or is_valid_stack_b2_on_b1):
                 # If either stacking order is stable, proceed with global check.
                 # The actual order (who is on top) is decided by R4 in determine_placings.
                 stack_abs_end_x = s_ox + max(dims1[0], dims2[0])
@@ -730,16 +812,39 @@ class hybrid_GA:
                 stack_abs_end_z = s_oz + dims1[2] + dims2[2] # Combined height
 
                 fits_globally_above = (
-                    stack_abs_end_x <= layer_abs_x_start + layer_depth_d + tol and
-                    stack_abs_end_y <= self.container.wc + tol and
-                    stack_abs_end_z <= self.container.hc + tol and
+                    stack_abs_end_x < layer_abs_x_start + layer_depth_d + tol and
+                    stack_abs_end_y < self.container.wc + tol and
+                    stack_abs_end_z < self.container.hc + tol and
                     s_ox >= layer_abs_x_start - tol and s_oy >= 0 - tol and s_oz >= 0 - tol
                 )
                 if fits_globally_above:
-                    priority_above = s_dz - (dims1[2] + dims2[2])
-                    valid_variants.append({'stype': 'above', 'priority': priority_above, 'vol': box1.vb + box2.vb,
-                                           'b1': box1, 'r1': rv1, 'd1': dims1,
-                                           'b2': box2, 'r2': rv2, 'd2': dims2})
+                    # --- Collision Check for Pair ---
+                    collides = False
+                    b1_coords = (s_ox, s_oy, s_oz) # Bottom box
+                    b2_coords = (s_ox, s_oy, s_oz + dims1[2]) # Top box (assuming b1 is bottom for now)
+
+                    for ep in existing_placings:
+                        ep_box = self.boxes_by_id[ep.id]
+                        ep_dims = self.get_rotated_dimensions(ep_box, ep.rv.rotation_id)
+                        ex_x, ex_y, ex_z = ep.ox, ep.oy, ep.oz
+                        ex_dx, ex_dy, ex_dz = ep_dims
+
+                        # Check box 1
+                        if (b1_coords[0] < ex_x + ex_dx - tol and b1_coords[0] + dims1[0] > ex_x + tol and
+                            b1_coords[1] < ex_y + ex_dy - tol and b1_coords[1] + dims1[1] > ex_y + tol and
+                            b1_coords[2] < ex_z + ex_dz - tol and b1_coords[2] + dims1[2] > ex_z + tol):
+                            collides = True; break
+                        # Check box 2
+                        if (b2_coords[0] < ex_x + ex_dx - tol and b2_coords[0] + dims2[0] > ex_x + tol and
+                            b2_coords[1] < ex_y + ex_dy - tol and b2_coords[1] + dims2[1] > ex_y + tol and
+                            b2_coords[2] < ex_z + ex_dz - tol and b2_coords[2] + dims2[2] > ex_z + tol):
+                            collides = True; break
+                    
+                    if not collides:
+                        priority_above = s_dz - (dims1[2] + dims2[2])
+                        valid_variants.append({'stype': 'above', 'priority': priority_above, 'vol': box1.vb + box2.vb,
+                                               'b1': box1, 'r1': rv1, 'd1': dims1,
+                                               'b2': box2, 'r2': rv2, 'd2': dims2})
 
         if not valid_variants:
             return None
@@ -760,6 +865,32 @@ class hybrid_GA:
             'volume': best_var['vol'],
             'priority': best_var['priority']
         }
+
+    def _reposition_layer(self, layer_to_copy, new_start_x):
+        """
+        Creates a new layer instance by copying an existing one and shifting all its
+        box placings along the X-axis to a new starting position.
+        """
+        if not layer_to_copy.Pl:
+            return copy.deepcopy(layer_to_copy)
+
+        original_start_x = min(p.ox for p in layer_to_copy.Pl)
+        
+        new_placings = []
+        for old_placing in layer_to_copy.Pl:
+            relative_ox = old_placing.ox - original_start_x
+            new_ox = new_start_x + relative_ox
+            
+            new_placings.append(self.box_placing(
+                id=old_placing.id,
+                ox=new_ox,
+                oy=old_placing.oy,
+                oz=old_placing.oz,
+                rotation_variant=copy.deepcopy(old_placing.rv)
+            ))
+            
+        new_layer = self.layer(d=layer_to_copy.d, vutil=layer_to_copy.vutil, Pl=new_placings)
+        return new_layer
 
     def __init__(self, container, box_list, npop=50, nrep=10, pcross=0.67, pmut=0.33):
         self.container = container
@@ -872,9 +1003,13 @@ class hybrid_GA:
                 can_add = False
 
             if can_add:
-                o.L.append(copy.deepcopy(lnext)) # Add a copy of the layer
+                # Calculate the new starting position for this layer
+                new_start_x = self.container.dc - temp_xcfree
+                # Reposition the layer and its contents to fit into the new plan
+                repositioned_layer = self._reposition_layer(lnext, new_start_x)
+                o.L.append(repositioned_layer)
                 o.nl += 1
-                temp_xcfree -= lnext.d
+                temp_xcfree -= lnext.d # Use original depth for xcfree update
                 temp_Bfree -= lnext.B()
         
         o.xcfree = temp_xcfree
@@ -930,7 +1065,11 @@ class hybrid_GA:
                 if not lnext.B().issubset(temp_Bfree): can_add = False
 
                 if can_add:
-                    o.L.append(copy.deepcopy(lnext))
+                    # Calculate the new starting position for this layer
+                    new_start_x = self.container.dc - temp_xcfree
+                    # Reposition the layer and its contents
+                    repositioned_layer = self._reposition_layer(lnext, new_start_x)
+                    o.L.append(repositioned_layer)
                     o.nl +=1
                     temp_xcfree -= lnext.d
                     temp_Bfree -= lnext.B()
@@ -979,7 +1118,11 @@ class hybrid_GA:
                     if not l_transfer.B().issubset(temp_Bfree): can_add = False
 
                     if can_add:
-                        o.L.append(copy.deepcopy(l_transfer))
+                        # Calculate the new starting position for this layer
+                        new_start_x = self.container.dc - temp_xcfree
+                        # Reposition the layer and its contents
+                        repositioned_layer = self._reposition_layer(l_transfer, new_start_x)
+                        o.L.append(repositioned_layer)
                         o.nl += 1
                         temp_xcfree -= l_transfer.d
                         temp_Bfree -= l_transfer.B()
@@ -1061,6 +1204,84 @@ class hybrid_GA:
             ax.set_zlabel("Container Height (Z)")
             plt.tight_layout()
             plt.show() # Show each layer plot individually
+
+    def visualize_single_boxes(self, stowage_plan):
+        """
+        Visualizes the stowage plan by adding one box at a time to the plot.
+        Uses an interactive "Next" button to proceed.
+        """
+        boxes_dict = {b.id: b for b in self.box_list}
+        
+        if not stowage_plan or not stowage_plan.L:
+            print("No stowage plan or layers to visualize.")
+            return
+
+        # Flatten the list of all placings from all layers
+        all_placings = [placing for layer_obj in stowage_plan.L for placing in layer_obj.Pl]
+        total_boxes = len(all_placings)
+        
+        if total_boxes == 0:
+            print("Stowage plan contains no packed boxes.")
+            return
+
+        # Pre-calculate all box Poly3DCollections and their info
+        all_box_collections_data = []
+        for placing in all_placings:
+            box_obj = boxes_dict.get(placing.id)
+            if not box_obj:
+                continue
+
+            rotation = placing.rv.rotation_id
+            dx, dy, dz = self.get_rotated_dimensions(box_obj, rotation)
+            x, y, z = placing.ox, placing.oy, placing.oz
+            
+            corners = [[x, y, z], [x+dx, y, z], [x+dx, y+dy, z], [x, y+dy, z], [x, y, z+dz], [x+dx, y, z+dz], [x+dx, y+dy, z+dz], [x, y+dy, z+dz]]
+            faces = [[corners[0], corners[1], corners[2], corners[3]], [corners[4], corners[5], corners[6], corners[7]], [corners[0], corners[1], corners[5], corners[4]], [corners[2], corners[3], corners[7], corners[6]], [corners[1], corners[2], corners[6], corners[5]], [corners[3], corners[0], corners[4], corners[7]]]
+            color = [random.random() for _ in range(3)]
+            box_collection = Poly3DCollection(faces, facecolors=color, linewidths=1, edgecolors='k', alpha=0.7)
+            all_box_collections_data.append({'collection': box_collection, 'placing': placing, 'box_obj': box_obj})
+
+        # --- Setup the interactive plot ---
+        fig = plt.figure(figsize=(10, 8))
+        # Adjust subplot to make space for the button at the bottom
+        ax = fig.add_subplot(111, projection='3d', position=[0.05, 0.15, 0.9, 0.8])
+        
+        ax.set_xlim([0, self.container.dc]); ax.set_ylim([0, self.container.wc]); ax.set_zlim([0, self.container.hc])
+        ax.set_xlabel("Depth (x)"); ax.set_ylabel("Width (y)"); ax.set_zlabel("Height (z)")
+        ax.set_title("Click 'Next' to add boxes")
+
+        # --- State for the callback ---
+        class PlotState:
+            def __init__(self):
+                self.current_index = 0
+
+        state = PlotState()
+
+        # --- Callback function for the button ---
+        def next_box_callback(event):
+            if state.current_index < total_boxes:
+                data = all_box_collections_data[state.current_index]
+                collection, placing, box_obj = data['collection'], data['placing'], data['box_obj']
+                
+                ax.add_collection3d(copy.copy(collection))
+                ax.set_title(f"Step {state.current_index + 1}/{total_boxes}: Added Box ID {placing.id} ({box_obj.name})")
+                fig.canvas.draw_idle()
+                
+                state.current_index += 1
+
+                if state.current_index >= total_boxes:
+                    button.ax.set_visible(False)
+                    fig.canvas.draw_idle()
+                    ax.set_title(f"Final Plan - All {total_boxes} boxes shown")
+
+        # --- Create and connect the button ---
+        ax_button = fig.add_axes([0.8, 0.02, 0.1, 0.05]) # [left, bottom, width, height]
+        button = Button(ax_button, 'Next')
+        button.on_clicked(next_box_callback)
+
+        plt.show()
+
+
 
     def visualize_stowage_plan(self, stowage_plan):
         boxes_dict = {b.id: b for b in self.box_list}
@@ -1196,6 +1417,10 @@ def solve_loading_problem(container_data, boxes_data, ga_params):
         db = float(b_data['db'])
         wb = float(b_data['wb'])
         hb = float(b_data['hb'])
+        weight = float(b_data.get('weight', 0)) # Add weight, default to 0
+        lbs = float(b_data.get('lbs', float('inf'))) # Add lbs, default to infinity
+        name = b_data.get('name', f"Box_{b_data['id']}") # Get name, default if not provided
+        original_type_id = b_data.get('original_type_id', str(b_data['id'])) # Get original_type_id, default to string of id
         allowed_orientations = b_data.get('allowed_orientations', list(range(1,7))) # Get allowed_orientations
         # Ensure allowed_orientations are integers if provided and valid range
         if not (isinstance(allowed_orientations, list) and \
@@ -1203,7 +1428,7 @@ def solve_loading_problem(container_data, boxes_data, ga_params):
                 allowed_orientations): # Ensure not empty
             allowed_orientations = list(range(1,7)) # Default if malformed or empty
         boxes_list_instances.append(hybrid_GA.box(
-            id=int(b_data['id']), db=db, wb=wb, hb=hb, vb=db*wb*hb, allowed_orientations=allowed_orientations
+            id=int(b_data['id']), db=db, wb=wb, hb=hb, vb=db*wb*hb, allowed_orientations=allowed_orientations, name=name, original_type_id=original_type_id, weight=weight, load_bearing_strength=lbs
         ))
 
     ga = hybrid_GA(
@@ -1230,8 +1455,9 @@ def solve_loading_problem(container_data, boxes_data, ga_params):
     ga.evaluate_fitness()
 
     start_time = time.time()
+    end_time = start_time
     generations_completed = 0
-    max_generations = ga_params.get('max_generations', 50) 
+    max_generations = ga_params.get('max_generations', 50)
     max_time_limit = ga_params.get('max_time_limit', 30)
 
     # --- Start of GA loop (copied and adapted from original __main__) ---
@@ -1280,6 +1506,7 @@ def solve_loading_problem(container_data, boxes_data, ga_params):
         ga.evaluate_generation(next_generation_list)
         ga.population = sorted(next_generation_list, key=lambda p: p.fitness, reverse=True)[:ga.npop]
         generations_completed += 1
+        end_time = time.time()
     # --- End of GA loop ---
 
     if not ga.population:
@@ -1291,27 +1518,71 @@ def solve_loading_problem(container_data, boxes_data, ga_params):
 
     sopt = max(ga.population, key=lambda p: p.v)
 
+    metrics = ga.get_plan_metrics(sopt)
+    metrics["time_taken_seconds"] = round(end_time - start_time, 3)
+
     return {
-        "metrics": ga.get_plan_metrics(sopt),
+        "metrics": metrics,
         "visualization_data": ga.get_visualization_data_for_plan(sopt)
     }
 
     
 
 # Sample Container (depth, width, height, volume)
-container_instance = hybrid_GA.container(dc=10, wc=5, hc=8, vc=400) # Changed var name
+container_instance = hybrid_GA.container(dc=8, wc=2.5, hc=2.6, vc=52) # Changed var name
 
 # Sample Boxes (id, depth, width, height, volume)
 boxes_list = [ # Changed var name
-    hybrid_GA.box(id=1, db=2, wb=3, hb=1, vb=6, allowed_orientations=[1, 2, 3, 4, 5, 6]),
-    hybrid_GA.box(id=2, db=1, wb=1, hb=4, vb=4, allowed_orientations=[1, 3, 5]),
-    hybrid_GA.box(id=3, db=3, wb=2, hb=2, vb=12, allowed_orientations=[1, 2]),
-    hybrid_GA.box(id=4, db=3, wb=6, hb=2, vb=36, allowed_orientations=None), # Defaults to all
-    hybrid_GA.box(id=5, db=3, wb=2, hb=2, vb=12), # Defaults to all
-    hybrid_GA.box(id=6, db=3, wb=3, hb=2, vb=18, allowed_orientations=[1,2,3,4,5,6]),
-    hybrid_GA.box(id=7, db=3, wb=7, hb=2, vb=42, allowed_orientations=[1]),
-    hybrid_GA.box(id=8, db=6, wb=3, hb=2, vb=36), # Defaults to all
-    hybrid_GA.box(id=9, db=1, wb=2, hb=2, vb=4, allowed_orientations=[1,3,4,6]),
+    hybrid_GA.box(id=1, db=0.75, wb=0.80, hb=1.85, vb=1.11, name="Réfrigérateur CONDOR Double porte – 465 L – Nofrost – INOX", original_type_id="Électroménager", weight=95, load_bearing_strength=200, allowed_orientations=[1, 2]),
+    hybrid_GA.box(id=2, db=0.75, wb=0.80, hb=1.85, vb=1.11, name="Réfrigérateur CONDOR Double porte – 465 L – Nofrost – INOX", original_type_id="Électroménager", weight=95, load_bearing_strength=200, allowed_orientations=[1, 2]),
+    hybrid_GA.box(id=3, db=0.75, wb=0.80, hb=1.85, vb=1.11, name="Réfrigérateur CONDOR Double porte – 465 L – Nofrost – INOX", original_type_id="Électroménager", weight=95, load_bearing_strength=200, allowed_orientations=[1, 2]),
+    hybrid_GA.box(id=4, db=0.75, wb=0.80, hb=1.85, vb=1.11, name="Réfrigérateur CONDOR Double porte – 465 L – Nofrost – INOX", original_type_id="Électroménager", weight=95, load_bearing_strength=200, allowed_orientations=[1, 2]),
+    hybrid_GA.box(id=5, db=0.75, wb=0.80, hb=1.85, vb=1.11, name="Réfrigérateur CONDOR Double porte – 465 L – Nofrost – INOX", original_type_id="Électroménager", weight=95, load_bearing_strength=200, allowed_orientations=[1, 2]),
+    hybrid_GA.box(id=6, db=0.75, wb=0.80, hb=1.85, vb=1.11, name="Réfrigérateur CONDOR Double porte – 465 L – Nofrost – INOX", original_type_id="Électroménager", weight=95, load_bearing_strength=200, allowed_orientations=[1, 2]),
+    hybrid_GA.box(id=7, db=0.75, wb=0.80, hb=1.85, vb=1.11, name="Réfrigérateur CONDOR Double porte – 465 L – Nofrost – INOX", original_type_id="Électroménager", weight=95, load_bearing_strength=200, allowed_orientations=[1, 2]),
+    hybrid_GA.box(id=8, db=0.75, wb=0.80, hb=1.85, vb=1.11, name="Réfrigérateur CONDOR Double porte – 465 L – Nofrost – INOX", original_type_id="Électroménager", weight=95, load_bearing_strength=200, allowed_orientations=[1, 2]),
+    hybrid_GA.box(id=9, db=0.75, wb=0.80, hb=1.85, vb=1.11, name="Réfrigérateur CONDOR Double porte – 465 L – Nofrost – INOX", original_type_id="Électroménager", weight=95, load_bearing_strength=200, allowed_orientations=[1, 2]),
+    hybrid_GA.box(id=10, db=0.75, wb=0.80, hb=1.85, vb=1.11, name="Réfrigérateur CONDOR Double porte – 465 L – Nofrost – INOX", original_type_id="Électroménager", weight=95, load_bearing_strength=200, allowed_orientations=[1, 2]),
+    hybrid_GA.box(id=11, db=1.30, wb=0.70, hb=0.85, vb=0.7735, name="Congélateur Horizontal | Série ACTIV | 390L | Thermostat Electronique | Convertible | Blanc", original_type_id="Électroménager", weight=15, load_bearing_strength=50, allowed_orientations=[1, 2, 4, 5]),
+    hybrid_GA.box(id=12, db=1.30, wb=0.70, hb=0.85, vb=0.7735, name="Congélateur Horizontal | Série ACTIV | 390L | Thermostat Electronique | Convertible | Blanc", original_type_id="Électroménager", weight=15, load_bearing_strength=50, allowed_orientations=[1, 2, 4, 5]),
+    hybrid_GA.box(id=13, db=1.30, wb=0.70, hb=0.85, vb=0.7735, name="Congélateur Horizontal | Série ACTIV | 390L | Thermostat Electronique | Convertible | Blanc", original_type_id="Électroménager", weight=15, load_bearing_strength=50, allowed_orientations=[1, 2, 4, 5]),
+    hybrid_GA.box(id=14, db=1.30, wb=0.70, hb=0.85, vb=0.7735, name="Congélateur Horizontal | Série ACTIV | 390L | Thermostat Electronique | Convertible | Blanc", original_type_id="Électroménager", weight=15, load_bearing_strength=50, allowed_orientations=[1, 2, 4, 5]),
+    hybrid_GA.box(id=15, db=1.30, wb=0.70, hb=0.85, vb=0.7735, name="Congélateur Horizontal | Série ACTIV | 390L | Thermostat Electronique | Convertible | Blanc", original_type_id="Électroménager", weight=15, load_bearing_strength=50, allowed_orientations=[1, 2, 4, 5]),
+    hybrid_GA.box(id=16, db=1.30, wb=0.70, hb=0.85, vb=0.7735, name="Congélateur Horizontal | Série ACTIV | 390L | Thermostat Electronique | Convertible | Blanc", original_type_id="Électroménager", weight=15, load_bearing_strength=50, allowed_orientations=[1, 2, 4, 5]),
+    hybrid_GA.box(id=17, db=1.30, wb=0.70, hb=0.85, vb=0.7735, name="Congélateur Horizontal | Série ACTIV | 390L | Thermostat Electronique | Convertible | Blanc", original_type_id="Électroménager", weight=15, load_bearing_strength=50, allowed_orientations=[1, 2, 4, 5]),
+    hybrid_GA.box(id=18, db=1.30, wb=0.70, hb=0.85, vb=0.7735, name="Congélateur Horizontal | Série ACTIV | 390L | Thermostat Electronique | Convertible | Blanc", original_type_id="Électroménager", weight=15, load_bearing_strength=50, allowed_orientations=[1, 2, 4, 5]),
+    hybrid_GA.box(id=19, db=1.30, wb=0.70, hb=0.85, vb=0.7735, name="Congélateur Horizontal | Série ACTIV | 390L | Thermostat Electronique | Convertible | Blanc", original_type_id="Électroménager", weight=15, load_bearing_strength=50, allowed_orientations=[1, 2, 4, 5]),
+    hybrid_GA.box(id=20, db=1.30, wb=0.70, hb=0.85, vb=0.7735, name="Congélateur Horizontal | Série ACTIV | 390L | Thermostat Electronique | Convertible | Blanc", original_type_id="Électroménager", weight=15, load_bearing_strength=50, allowed_orientations=[1, 2, 4, 5]),
+    hybrid_GA.box(id=21, db=0.75, wb=0.80, hb=1.85, vb=1.11, name="Réfrigérateur CONDOR Double porte – 465 L – Nofrost – INOX", original_type_id="Électroménager", weight=95, load_bearing_strength=200, allowed_orientations=[1, 2]),
+    hybrid_GA.box(id=22, db=0.75, wb=0.80, hb=1.85, vb=1.11, name="Réfrigérateur CONDOR Double porte – 465 L – Nofrost – INOX", original_type_id="Électroménager", weight=95, load_bearing_strength=200, allowed_orientations=[1, 2]),
+    hybrid_GA.box(id=23, db=0.75, wb=0.80, hb=1.85, vb=1.11, name="Réfrigérateur CONDOR Double porte – 465 L – Nofrost – INOX", original_type_id="Électroménager", weight=95, load_bearing_strength=200, allowed_orientations=[1, 2]),
+    hybrid_GA.box(id=24, db=0.75, wb=0.80, hb=1.85, vb=1.11, name="Réfrigérateur CONDOR Double porte – 465 L – Nofrost – INOX", original_type_id="Électroménager", weight=95, load_bearing_strength=200, allowed_orientations=[1, 2]),
+    hybrid_GA.box(id=25, db=0.75, wb=0.80, hb=1.85, vb=1.11, name="Réfrigérateur CONDOR Double porte – 465 L – Nofrost – INOX", original_type_id="Électroménager", weight=95, load_bearing_strength=200, allowed_orientations=[1, 2]),
+    hybrid_GA.box(id=26, db=0.75, wb=0.80, hb=1.85, vb=1.11, name="Réfrigérateur CONDOR Double porte – 465 L – Nofrost – INOX", original_type_id="Électroménager", weight=95, load_bearing_strength=200, allowed_orientations=[1, 2]),
+    hybrid_GA.box(id=27, db=0.75, wb=0.80, hb=1.85, vb=1.11, name="Réfrigérateur CONDOR Double porte – 465 L – Nofrost – INOX", original_type_id="Électroménager", weight=95, load_bearing_strength=200, allowed_orientations=[1, 2]),
+    hybrid_GA.box(id=28, db=0.75, wb=0.80, hb=1.85, vb=1.11, name="Réfrigérateur CONDOR Double porte – 465 L – Nofrost – INOX", original_type_id="Électroménager", weight=95, load_bearing_strength=200, allowed_orientations=[1, 2]),
+    hybrid_GA.box(id=29, db=0.75, wb=0.80, hb=1.85, vb=1.11, name="Réfrigérateur CONDOR Double porte – 465 L – Nofrost – INOX", original_type_id="Électroménager", weight=95, load_bearing_strength=200, allowed_orientations=[1, 2]),
+    hybrid_GA.box(id=30, db=0.75, wb=0.80, hb=1.85, vb=1.11, name="Réfrigérateur CONDOR Double porte – 465 L – Nofrost – INOX", original_type_id="Électroménager", weight=95, load_bearing_strength=200, allowed_orientations=[1, 2]),
+    hybrid_GA.box(id=31, db=0.60, wb=0.55, hb=0.85, vb=0.90, name="Lave-linge CONDOR Frontale – 8 kg – Inverter", original_type_id="Électroménager", weight=70, load_bearing_strength=110, allowed_orientations=[1, 2]),
+    hybrid_GA.box(id=32, db=0.60, wb=0.55, hb=0.85, vb=0.90, name="Lave-linge CONDOR Frontale – 8 kg – Inverter", original_type_id="Électroménager", weight=70, load_bearing_strength=110, allowed_orientations=[1, 2]),
+    hybrid_GA.box(id=33, db=0.60, wb=0.55, hb=0.85, vb=0.90, name="Lave-linge CONDOR Frontale – 8 kg – Inverter", original_type_id="Électroménager", weight=70, load_bearing_strength=110, allowed_orientations=[1, 2]),
+    hybrid_GA.box(id=34, db=0.60, wb=0.55, hb=0.85, vb=0.90, name="Lave-linge CONDOR Frontale – 8 kg – Inverter", original_type_id="Électroménager", weight=70, load_bearing_strength=110, allowed_orientations=[1, 2]),
+    hybrid_GA.box(id=35, db=0.60, wb=0.55, hb=0.85, vb=0.90, name="Lave-linge CONDOR Frontale – 8 kg – Inverter", original_type_id="Électroménager", weight=70, load_bearing_strength=110, allowed_orientations=[1, 2]),
+    hybrid_GA.box(id=36, db=0.60, wb=0.55, hb=0.85, vb=0.90, name="Lave-linge CONDOR Frontale – 8 kg – Inverter", original_type_id="Électroménager", weight=70, load_bearing_strength=110, allowed_orientations=[1, 2]),
+    hybrid_GA.box(id=37, db=0.60, wb=0.55, hb=0.85, vb=0.90, name="Lave-linge CONDOR Frontale – 8 kg – Inverter", original_type_id="Électroménager", weight=70, load_bearing_strength=110, allowed_orientations=[1, 2]),
+    hybrid_GA.box(id=38, db=0.60, wb=0.55, hb=0.85, vb=0.90, name="Lave-linge CONDOR Frontale – 8 kg – Inverter", original_type_id="Électroménager", weight=70, load_bearing_strength=110, allowed_orientations=[1, 2]),
+    hybrid_GA.box(id=39, db=0.60, wb=0.55, hb=0.85, vb=0.90, name="Lave-linge CONDOR Frontale – 8 kg – Inverter", original_type_id="Électroménager", weight=70, load_bearing_strength=110, allowed_orientations=[1, 2]),
+    hybrid_GA.box(id=40, db=0.60, wb=0.55, hb=0.85, vb=0.90, name="Lave-linge CONDOR Frontale – 8 kg – Inverter", original_type_id="Électroménager", weight=70, load_bearing_strength=110, allowed_orientations=[1, 2]),
+    hybrid_GA.box(id=41, db=0.60, wb=0.55, hb=0.65, vb=0.75, name="Four encastrable CONDOR – 65 L – Inox – Multifonction", original_type_id="Électroménager", weight=32, load_bearing_strength=90, allowed_orientations=[1, 2]),
+    hybrid_GA.box(id=42, db=0.60, wb=0.55, hb=0.65, vb=0.75, name="Four encastrable CONDOR – 65 L – Inox – Multifonction", original_type_id="Électroménager", weight=32, load_bearing_strength=90, allowed_orientations=[1, 2]),
+    hybrid_GA.box(id=43, db=0.60, wb=0.55, hb=0.65, vb=0.75, name="Four encastrable CONDOR – 65 L – Inox – Multifonction", original_type_id="Électroménager", weight=32, load_bearing_strength=90, allowed_orientations=[1, 2]),
+    hybrid_GA.box(id=44, db=0.60, wb=0.55, hb=0.65, vb=0.75, name="Four encastrable CONDOR – 65 L – Inox – Multifonction", original_type_id="Électroménager", weight=32, load_bearing_strength=90, allowed_orientations=[1, 2]),
+    hybrid_GA.box(id=45, db=0.60, wb=0.55, hb=0.65, vb=0.75, name="Four encastrable CONDOR – 65 L – Inox – Multifonction", original_type_id="Électroménager", weight=32, load_bearing_strength=90, allowed_orientations=[1, 2]),
+    hybrid_GA.box(id=46, db=0.60, wb=0.55, hb=0.65, vb=0.75, name="Four encastrable CONDOR – 65 L – Inox – Multifonction", original_type_id="Électroménager", weight=32, load_bearing_strength=90, allowed_orientations=[1, 2]),
+    hybrid_GA.box(id=47, db=0.60, wb=0.55, hb=0.65, vb=0.75, name="Four encastrable CONDOR – 65 L – Inox – Multifonction", original_type_id="Électroménager", weight=32, load_bearing_strength=90, allowed_orientations=[1, 2]),
+    hybrid_GA.box(id=48, db=0.60, wb=0.55, hb=0.65, vb=0.75, name="Four encastrable CONDOR – 65 L – Inox – Multifonction", original_type_id="Électroménager", weight=32, load_bearing_strength=90, allowed_orientations=[1, 2]),
+    hybrid_GA.box(id=49, db=0.60, wb=0.55, hb=0.65, vb=0.75, name="Four encastrable CONDOR – 65 L – Inox – Multifonction", original_type_id="Électroménager", weight=32, load_bearing_strength=90, allowed_orientations=[1, 2]),
+    hybrid_GA.box(id=50, db=0.60, wb=0.55, hb=0.65, vb=0.75, name="Four encastrable CONDOR – 65 L – Inox – Multifonction", original_type_id="Électroménager", weight=32, load_bearing_strength=90, allowed_orientations=[1, 2]),
 ]
 
 # Initialize GA with parameters
@@ -1323,118 +1594,167 @@ ga_instance = hybrid_GA( # Renamed to avoid conflict with module name 'hga'
         pmut=0.33
 )
 
-# if __name__ == "__main__":
-#     print("Before initializing population...")
-#     ga.initialize_population()
-#     print(f"After initializing population ({len(ga.population)} plans)... entering evolution loop")
-
-#     ga.evaluate_fitness()
-
-#     start_time = time.time()
-#     generations_completed = 0
-#     max_generations = 50 # Reduced for quick test; paper uses 500
-#     max_time_limit = 30  # seconds; paper uses 500
-
-#     print("before while loop")
-
-#     while generations_completed < max_generations and (time.time() - start_time) < max_time_limit:
-#         ga.current_generation = generations_completed # Update current generation for R3 rule
-
-#         sorted_plans = sorted(ga.population, key=lambda p: -p.fitness if hasattr(p, 'fitness') else -float('inf'))
-
-#         # Elitism: Keep top nrep plans
-#         next_generation_list = copy.deepcopy(sorted_plans[:ga.nrep]) # Changed var name
-
-#         # Generate remaining population via crossover and mutation
-#         while len(next_generation_list) < ga.npop:
-#             op_choice = random.choices( # Changed op to op_choice
-#                 population=["crossover", "mutation"],
-#                 weights=[ga.pcross, ga.pmut],
-#                 k=1
-#             )[0]
-
-#             p1, p2 = ga.select_parents(sorted_plans)
-#             if p1 is None: # Safety break if selection fails
-#                 print("Parent selection failed, breaking generation.")
-#                 break
-
-#             offspring = None # Changed o to offspring
-#             if op_choice == "crossover":
-#                 if p2 is None: p2 = p1 # Handle case where only one parent could be selected
-#                 crossoverOK, offspring_co = ga.crossover(p1, p2)
-#                 if crossoverOK:
-#                     offspring = offspring_co
-#                 else: # If crossover failed (e.g. identical to parent), try mutation on p1
-#                     offspring = ga.standard_mutation(p1)
-
-#             else: # Mutation
-#                 offspring = ga.standard_mutation(p1)
-
-#             if offspring: # Ensure offspring is not None
-#                  next_generation_list.append(offspring)
-#             elif len(next_generation_list) < ga.npop : # Fill with a copy if operator failed
-#                  next_generation_list.append(copy.deepcopy(p1))
 
 
-#         # Add merger mutations (replace worst individuals if pop is full)
-#         for _ in range(ga.nmerge):
-#             p_merge, _ = ga.select_parents(sorted_plans)
-#             if p_merge is None: continue
-#             offspring_merge = ga.merger_mutation(p_merge)
-#             if len(next_generation_list) < ga.npop:
-#                 next_generation_list.append(offspring_merge)
-#             else: # Replace one of the worst if merger is better
-#                 if offspring_merge.fitness > next_generation_list[-1].fitness: # Assuming sorted by fitness desc
-#                     next_generation_list[-1] = offspring_merge
-#                     next_generation_list.sort(key=lambda p: -p.fitness if hasattr(p, 'fitness') else -float('inf'))
 
 
-#         # Evaluate the fitness of the new generation (temporarily assign to self.population)
-#         ga.evaluate_generation(next_generation_list) # Pass the list to evaluate
-
-#         # Reduce to the npop best solutions
-#         ga.population = sorted(next_generation_list, key=lambda p: -p.fitness if hasattr(p, 'fitness') else -float('inf'))[:ga.npop]
-
-#         generations_completed += 1
-#         if generations_completed % 10 == 0:
-#             best_current_fitness = ga.population[0].fitness if ga.population else -1
-#             print(f"Gen: {generations_completed}, Best Fitness: {best_current_fitness:.4f}, Pop Size: {len(ga.population)}")
 
 
-#     # Determine the best plan from the final population
-#     if ga.population:
-#         sopt = max(ga.population, key=lambda p: p.v) # Select based on actual volume 'v'
+if __name__ == "__main__":
+    
+    ga_instance.initialize_population() # Use ga_instance
+  
 
-#         print("\n===== Stowage Plan Summary =====\n")
-#         print(f"Total layers: {sopt.nl}")
-#         print(f"Unstowed box IDs: {sopt.Bfree}")
-#         print(f"Remaining container depth (xcfree): {sopt.xcfree:.2f}")
-#         print(f"Total packed volume: {sopt.v:.2f} / {sopt.container.vc:.2f}")
-#         if sopt.container.vc > 0:
-#              print(f"Overall volume utilization: {sopt.v / sopt.container.vc:.2%}\n")
-#         else:
-#              print("Overall volume utilization: N/A (container volume is zero)\n")
+    ga_instance.evaluate_fitness() # Use ga_instance
+
+    start_time = time.time()
+    generations_completed = 0
+    max_generations = 50 # Reduced for quick test; paper uses 500
+    max_time_limit = 30  # seconds; paper uses 500
 
 
-#         for i, layer_obj in enumerate(sopt.L, start=1): # Changed layer to layer_obj
-#             print(f"--- Layer {i} ---")
-#             print(f"Depth (d): {layer_obj.d}")
-#             print(f"Volume utilization (vutil): {layer_obj.vutil:.2%}")
-#             print(f"Number of boxes in layer (npl): {layer_obj.npl}")
-#             print(f"Box IDs in this layer: {sorted(layer_obj.B())}")
-#             print("Placings:")
-#             for placing in layer_obj.Pl:
-#                 print(f"  Box ID: {placing.id}, Pos: ({placing.ox:.2f}, {placing.oy:.2f}, {placing.oz:.2f}), Rotation ID: {placing.rv.rotation_id}")
-#             print()
 
-#         # Visualize the best stowage plan
-#         # ga.visualize_stowage_plan(sopt) # Uncomment to visualize
+    while generations_completed < max_generations and (time.time() - start_time) < max_time_limit:
+        ga_instance.current_generation = generations_completed # Update current generation for R3 rule
 
-#         print("\nVisualizing individual layers of the best plan...")
-#         ga.visualize_individual_layers(sopt)
+        # Ensure all plans have fitness before sorting
+        for p_check_initial_sort in ga_instance.population:
+            if not hasattr(p_check_initial_sort, 'fitness'): 
+                p_check_initial_sort.fitness = 0.0 # Assign default if missing
+
+        sorted_plans = sorted(ga_instance.population, key=lambda p: p.fitness, reverse=True)
+
+        # Elitism: Keep top nrep plans
+        next_generation_list = copy.deepcopy(sorted_plans[:ga_instance.nrep])
+
+        # Generate remaining population via crossover and mutation
+        while len(next_generation_list) < ga_instance.npop:
+            op_choice = random.choices(
+                population=["crossover", "mutation"],
+                weights=[ga_instance.pcross, ga_instance.pmut],
+                k=1
+            )[0]
+
+            p1, p2 = ga_instance.select_parents(sorted_plans) # sorted_plans argument is ignored by select_parents
+            
+            if p1 is None: # Safety break if selection fails (e.g., population empty)
+                print("Parent selection failed, breaking generation.")
+                break
+            
+            if p2 is None: p2 = p1 # Handle case where only one parent could be selected or if p1 was a fallback
+
+            offspring = None
+            if op_choice == "crossover":
+                crossoverOK, offspring_co = ga_instance.crossover(p1, p2)
+                if crossoverOK:
+                    offspring = offspring_co
+                else: # If crossover failed (e.g. identical to parent), try mutation on p1
+                    offspring = ga_instance.standard_mutation(p1)
+            else: # Mutation
+                offspring = ga_instance.standard_mutation(p1)
+
+            if offspring: # Ensure offspring is not None
+                 next_generation_list.append(offspring)
+            elif len(next_generation_list) < ga_instance.npop and p1: # Fill with a copy of parent1 if operator failed
+                 next_generation_list.append(copy.deepcopy(p1))
+            elif len(next_generation_list) < ga_instance.npop and ga_instance.population: # Broader fallback
+                 next_generation_list.append(copy.deepcopy(random.choice(ga_instance.population)))
+
+
+        # Add merger mutations
+        for _ in range(ga_instance.nmerge):
+            p_merge, _ = ga_instance.select_parents(sorted_plans) # sorted_plans argument is ignored
+            if p_merge is None: 
+                # Fallback if select_parents returned None but population might still exist
+                if ga_instance.population:
+                    p_merge = random.choice(ga_instance.population)
+                else:
+                    continue # No parent to select
+
+            offspring_merge = ga_instance.merger_mutation(p_merge)
+            
+            # Evaluate fitness of offspring_merge before deciding to add/replace
+            temp_eval_list_for_merge = [offspring_merge]
+            original_pop_state_for_merge_eval = ga_instance.population # Save current state
+            ga_instance.population = temp_eval_list_for_merge # Set to evaluate only new offspring
+            ga_instance.evaluate_fitness() # This assigns fitness to offspring_merge
+            ga_instance.population = original_pop_state_for_merge_eval # Restore original population
+
+            if len(next_generation_list) < ga_instance.npop:
+                next_generation_list.append(offspring_merge)
+            else: # Replace one of the worst if merger is better
+                # Ensure all in next_generation_list have fitness before sorting for replacement
+                for ng_plan_check_fitness in next_generation_list:
+                    if not hasattr(ng_plan_check_fitness, 'fitness'):
+                        ng_plan_check_fitness.fitness = 0.0 # Assign default if missing
+                
+                next_generation_list.sort(key=lambda p_sort_key: p_sort_key.fitness, reverse=True)
+                
+                if hasattr(offspring_merge, 'fitness') and offspring_merge.fitness > next_generation_list[-1].fitness:
+                    next_generation_list[-1] = offspring_merge
+                    # Re-sort if a replacement happened
+                    for ng_plan_resort_check in next_generation_list:
+                        if not hasattr(ng_plan_resort_check, 'fitness'):
+                            ng_plan_resort_check.fitness = 0.0
+                    next_generation_list.sort(key=lambda p_sort_key_after_replace: p_sort_key_after_replace.fitness, reverse=True)
+
+        # Ensure all plans in next_generation_list have a fitness attribute before evaluation
+        for p_final_check in next_generation_list:
+            if not hasattr(p_final_check, 'fitness'):
+                p_final_check.fitness = 0.0
+
+        ga_instance.evaluate_generation(next_generation_list) # Pass the list to evaluate
+
+        # Reduce to the npop best solutions. Now all plans in next_generation_list have proper fitness.
+        ga_instance.population = sorted(next_generation_list, key=lambda p_final_sort: p_final_sort.fitness, reverse=True)[:ga_instance.npop]
+
+        generations_completed += 1
+        if generations_completed % 10 == 0 or generations_completed == max_generations -1 : # Also print for last generation
+            best_current_fitness = ga_instance.population[0].fitness if ga_instance.population and hasattr(ga_instance.population[0], 'fitness') else -1.0
+            print(f"Gen: {generations_completed}, Best Fitness: {best_current_fitness:.4f}, Pop Size: {len(ga_instance.population)}")
+
+
+    # Determine the best plan from the final population
+    if ga_instance.population:
+        sopt = max(ga_instance.population, key=lambda p: p.v) # Select based on actual volume 'v'
+
+        print("\n===== Stowage Plan Summary =====\n")
+        print(f"Total layers: {sopt.nl}")
+        # Display original_type_id for unstowed boxes
+        unstowed_original_ids = [ga_instance.boxes_by_id[b_id].original_type_id for b_id in sopt.Bfree if b_id in ga_instance.boxes_by_id]
+        print(f"Unstowed box Original Type IDs: {sorted(list(set(unstowed_original_ids)))}")
+        print(f"Remaining container depth (xcfree): {sopt.xcfree:.2f}")
+        print(f"Total packed volume: {sopt.v:.2f} / {sopt.container.vc:.2f}")
+        if sopt.container.vc > 0:
+             print(f"Overall volume utilization: {(sopt.v / sopt.container.vc) * 100:.2f}%\n")
+        else:
+             print("Overall volume utilization: N/A (container volume is zero)\n")
+
+
+        for i, layer_obj in enumerate(sopt.L, start=1):
+            print(f"--- Layer {i} ---")
+            print(f"Depth (d): {layer_obj.d:.2f}") # Format depth
+            print(f"Volume utilization (vutil): {layer_obj.vutil * 100:.2f}%") # Format vutil
+            print(f"Number of boxes in layer (npl): {layer_obj.npl}")
+            # Display original_type_id for boxes in layer
+            layer_box_original_ids = [ga_instance.boxes_by_id[b_id].original_type_id for b_id in layer_obj.B() if b_id in ga_instance.boxes_by_id]
+            print(f"Box Original Type IDs in this layer: {sorted(list(set(layer_box_original_ids)))}")
+            print("Placings:")
+            for placing in layer_obj.Pl:
+                box_original_id = ga_instance.boxes_by_id[placing.id].original_type_id if placing.id in ga_instance.boxes_by_id else "Unknown"
+                print(f"  Box ID (Internal): {placing.id} (Original: {box_original_id}), Pos: ({placing.ox:.2f}, {placing.oy:.2f}, {placing.oz:.2f}), Rotation ID: {placing.rv.rotation_id}")
+            print()
+
+        # Visualize the best stowage plan
+        # ga_instance.visualize_stowage_plan(sopt) # Uncomment to visualize full plan
+
+        print("\nVisualizing single boxes of the best plan...")
+        ga_instance.visualize_single_boxes(sopt)
         
-#     else:
-#         print("No solution found after evolution.")
+    else:
+        print("No solution found after evolution.")
+
+
 
 
 

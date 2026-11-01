@@ -1,0 +1,34 @@
+{
+    "truck": {
+        "client": "Demo · Atlas Home Store",
+        "vehicle": "Camion 5T",
+        "items": [
+            { "name": "Réfrigérateur CONDOR Double porte 465 L", "qty": 8, "d": 0.75, "w": 0.8, "h": 1.85, "weight": 95, "lbs": 0, "upright": true },
+            { "name": "Machine à Laver CONDOR LULA Frontal 8 kg", "qty": 10, "d": 0.65, "w": 0.65, "h": 0.9, "weight": 68, "lbs": 40, "upright": true },
+            { "name": "Micro-Ondes HISENSE 26 L", "qty": 20, "d": 0.52, "w": 0.42, "h": 0.31, "weight": 15, "lbs": 10.5, "upright": true },
+            { "name": "Climatiseur DAIKIN Inverter 12K Btu", "qty": 12, "d": 0.9, "w": 0.3, "h": 0.4, "weight": 20, "lbs": 6, "upright": true },
+            { "name": "TV CONDOR Série T4 43\"", "qty": 6, "d": 1.05, "w": 0.15, "h": 0.68, "weight": 10, "lbs": 0, "upright": true }
+        ]
+    },
+    "fleet": {
+        "client": "Demo · Grand opening order",
+        "vehicle": "Camion 2.5T",
+        "maxTrucks": 4,
+        "items": [
+            { "name": "Réfrigérateur CONDOR Double porte 465 L", "qty": 12, "d": 0.75, "w": 0.8, "h": 1.85, "weight": 95, "lbs": 0, "upright": true },
+            { "name": "Machine à Laver CONDOR LULA Frontal 8 kg", "qty": 14, "d": 0.65, "w": 0.65, "h": 0.9, "weight": 68, "lbs": 40, "upright": true },
+            { "name": "Congélateur Horizontal ACTIV 390 L", "qty": 6, "d": 1.3, "w": 0.7, "h": 0.85, "weight": 15, "lbs": 20, "upright": true },
+            { "name": "Micro-Ondes HISENSE 26 L", "qty": 24, "d": 0.52, "w": 0.42, "h": 0.31, "weight": 15, "lbs": 10.5, "upright": true }
+        ]
+    },
+    "pallet": {
+        "client": "Demo · Small appliances pallet",
+        "pallet": "EUR",
+        "items": [
+            { "name": "Micro-Ondes HISENSE 26 L", "qty": 6, "d": 0.52, "w": 0.42, "h": 0.31, "weight": 15, "lbs": 30, "upright": true },
+            { "name": "Friteuse Moulinex FRY UNO", "qty": 8, "d": 0.3, "w": 0.3, "h": 0.3, "weight": 3, "lbs": 10, "upright": true },
+            { "name": "Blender MOULINEX Blendforce 2", "qty": 12, "d": 0.25, "w": 0.18, "h": 0.3, "weight": 2.2, "lbs": 5, "upright": true },
+            { "name": "Grille pain Rétro 2 tranches", "qty": 10, "d": 0.3, "w": 0.15, "h": 0.2, "weight": 1.5, "lbs": 2.3, "upright": true }
+        ]
+    }
+}

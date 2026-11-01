@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colis · Plan de chargement</title>
+    <meta name="description" content="Rangez vos colis dans un camion ou sur une palette sans perdre de place. Plan de chargement en 3D, colis par colis.">
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.svg') }}" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+    <script type="importmap">
+    { "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    } }
+    </script>
+</head>
+<body class="home">
+<header class="top">
+    <a class="brand" href="{{ url_for('landing') }}">{% with size=32 %}{% include '_logo.html' %}{% endwith %}<span class="brand-name">Colis</span></a>
+    <nav class="home-nav">
+        <a href="{{ url_for('workspace', mode='truck') }}">Un camion</a>
+        <a href="{{ url_for('workspace', mode='fleet') }}">Plusieurs camions</a>
+        <a href="{{ url_for('workspace', mode='pallet') }}">Une palette</a>
+        <a class="btn btn-sm btn-primary" href="{{ url_for('workspace') }}">Ouvrir →</a>
+    </nav>
+</header>
+
+<main>
+    <section class="home-hero">
+        <div class="home-copy">
+            <span class="label">Plan de chargement · 3D</span>
+            <h1>Rangez vos colis sans perdre de place.</h1>
+            <p>Choisissez un camion, ajoutez vos colis, et Colis vous montre comment tout ranger, colis par colis, du fond du camion jusqu'à la porte.</p>
+            <div class="home-actions">
+                <a class="btn btn-primary" href="{{ url_for('workspace') }}">Commencer →</a>
+                <a class="btn" href="{{ url_for('workspace', mode='truck', demo=1) }}">↻ Voir un exemple</a>
+            </div>
+            <dl class="home-facts">
+                <div><dt>Modes</dt><dd>3</dd></div>
+                <div><dt>Produits</dt><dd>{{ product_count }}</dd></div>
+                <div><dt>Camions</dt><dd>{{ truck_count }}</dd></div>
+            </dl>
+        </div>
+
+        <div class="plan home-plan">
+            <div class="plan-head">
+                <span>Plan de chargement</span>
+                <span><b id="demo-vehicle"></b></span>
+            </div>
+            <div class="stage" id="demo-stage"></div>
+            <div class="plan-foot">
+                <div class="stats"><span>Colis<b id="demo-count">0/0</b></span><span>Volume chargé<b id="demo-vol">0 %</b></span></div>
+                <div class="tools"><button class="tool" id="demo-replay">↻ Rejouer</button></div>
+            </div>
+            <p class="plan-note">Exemple : un magasin d'électroménager remplit son camion. Faites glisser pour tourner.</p>
+        </div>
+    </section>
+
+    <section class="home-row">
+        <div class="home-cell"><span class="label">Étape 01</span><h3>Choisir le camion</h3><p>Un camion, plusieurs camions ou une palette. Les tailles sont déjà prêtes.</p></div>
+        <div class="home-cell"><span class="label">Étape 02</span><h3>Ajouter les colis</h3><p>Dans la liste de produits, ou avec vos propres tailles. « Fragile » et « toujours debout » en un clic.</p></div>
+        <div class="home-cell"><span class="label">Étape 03</span><h3>Ranger</h3><p>Le plan s'affiche en 3D. Regardez-le se construire, ou avancez colis par colis.</p></div>
+        <div class="home-cell"><span class="label">Étape 04</span><h3>Télécharger</h3><p>Un rapport Excel avec l'image du chargement et l'ordre exact pour poser chaque colis.</p></div>
+    </section>
+
+    <section class="home-row home-modes">
+        <a class="home-cell" href="{{ url_for('workspace', mode='truck') }}"><span class="label">Mode 01</span><h3>Un camion →</h3><p>Remplir un seul camion au mieux.</p></a>
+        <a class="home-cell" href="{{ url_for('workspace', mode='fleet') }}"><span class="label">Mode 02</span><h3>Plusieurs camions →</h3><p>Répartir une grosse commande sur le moins de camions possible.</p></a>
+        <a class="home-cell" href="{{ url_for('workspace', mode='pallet') }}"><span class="label">Mode 03</span><h3>Une palette →</h3><p>Empiler des colis sur une palette, sans dépasser la hauteur.</p></a>
+    </section>
+</main>
+
+<footer class="home-foot">
+    <span>Colis · plan de chargement en 3D</span>
+    <span>Algorithme génétique hybride · rangement par couches</span>
+</footer>
+
+<script type="module" src="{{ url_for('static', filename='js/landing.js') }}"></script>
+</body>
+</html>

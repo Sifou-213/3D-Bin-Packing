@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colis · Plan de chargement</title>
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.svg') }}" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+    <script type="importmap">
+    { "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    } }
+    </script>
+</head>
+<body data-mode="{{ mode }}">
+
+<header class="top">
+    <a class="brand" href="{{ url_for('landing') }}">{% with size=32 %}{% include '_logo.html' %}{% endwith %}<span class="brand-name">Colis</span></a>
+    <div style="display:flex;gap:2px">
+        <button class="btn btn-text btn-sm" id="demo-btn">↻ Exemple</button>
+        <button class="btn btn-text btn-sm" id="reset-btn">× Recommencer</button>
+    </div>
+</header>
+
+<main class="ws">
+    <!-- ============ Left: three simple steps ============ -->
+    <section class="side">
+        <div class="side-body">
+
+            <div>
+                <div class="sec-title"><span class="n">01</span>Où ranger ?</div>
+                <div class="tabs3" id="mode-tabs">
+                    <button data-mode="truck">Un camion</button>
+                    <button data-mode="fleet">Plusieurs camions</button>
+                    <button data-mode="pallet">Une palette</button>
+                </div>
+
+                <div id="truck-box">
+                    <div class="chips" id="truck-chips"></div>
+                    <div class="row3" style="margin-top:12px">
+                        <label class="field"><span>Longueur</span><div class="unit" data-unit="m"><input class="input" type="number" step="0.1" min="0" id="v-dc"></div></label>
+                        <label class="field"><span>Largeur</span><div class="unit" data-unit="m"><input class="input" type="number" step="0.1" min="0" id="v-wc"></div></label>
+                        <label class="field"><span>Hauteur</span><div class="unit" data-unit="m"><input class="input" type="number" step="0.1" min="0" id="v-hc"></div></label>
+                    </div>
+                    <div class="inline-row fleet-only">
+                        <span class="label">Camions au maximum</span>
+                        <div class="stepper">
+                            <button type="button" data-step="-1" aria-label="Moins">−</button>
+                            <input type="number" id="max-trucks" min="1" max="20">
+                            <button type="button" data-step="1" aria-label="Plus">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="pallet-box">
+                    <div class="chips" id="pallet-chips"></div>
+                    <div class="row2" style="margin-top:12px">
+                        <label class="field"><span>Longueur</span><div class="unit" data-unit="m"><input class="input" type="number" step="0.01" min="0" id="p-length"></div></label>
+                        <label class="field"><span>Largeur</span><div class="unit" data-unit="m"><input class="input" type="number" step="0.01" min="0" id="p-width"></div></label>
+                        <label class="field"><span>Hauteur max</span><div class="unit" data-unit="m"><input class="input" type="number" step="0.01" min="0" id="p-maxh"></div></label>
+                        <label class="field"><span>Poids max</span><div class="unit" data-unit="kg"><input class="input" type="number" step="1" min="0" id="p-maxw"></div></label>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="sec-title"><span class="n">02</span>Quoi ranger ?<span class="aside" id="items-count"></span></div>
+                <div class="items" id="items"></div>
+                <div class="add-row">
+                    <button class="btn" id="catalog-btn">+ Produit</button>
+                    <button class="btn" id="add-item-btn">+ Autre colis</button>
+                </div>
+                <div class="total" id="total"></div>
+            </div>
+        </div>
+
+        <div class="side-foot">
+            <button class="btn btn-primary btn-xl" id="pack-btn">Ranger les colis →</button>
+            <div class="quality">
+                <span class="label">Recherche</span>
+                <div class="chips" id="quality-chips">
+                    <button class="chip" data-q="fast">Rapide</button>
+                    <button class="chip" data-q="normal">Normale</button>
+                    <button class="chip" data-q="best">Soignée</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ Right: the load plan ============ -->
+    <section class="main">
+        <div class="plan">
+            <div class="plan-head">
+                <span>Plan de chargement</span>
+                <span id="plan-vehicle"><b></b></span>
+            </div>
+            <div class="plan-head hidden" id="plan-tabs-row">
+                <div class="plan-tabs" id="plan-tabs"></div>
+            </div>
+            <div class="stage" id="stage">
+                <div class="plan-hint" id="plan-hint">Glisser pour tourner · molette pour zoomer · <span class="kbd">←</span> <span class="kbd">→</span> colis par colis</div>
+                <div class="busy hidden" id="busy">
+                    <svg width="56" height="56" viewBox="0 0 100 100"><path d="M50 23 L77 36.5 L50 50 L23 36.5 Z" fill="#fff"/><path d="M22 40 L48 53 L48 80 L22 67 Z" fill="#fff"/><path d="M52 53 L78 40 L78 67 L52 80 Z" fill="#fff"/><path d="M57.5 26.75 L65.5 30.75 L39.5 43.75 L31.5 39.75 Z" fill="#0D0F12"/></svg>
+                    <span class="label">On range vos colis…</span>
+                    <span class="label" id="busy-time">0 s</span>
+                </div>
+            </div>
+            <div class="plan-steps hidden" id="plan-steps">
+                <div class="tools">
+                    <button class="tool" id="step-first" title="Camion vide (Début)">⏮</button>
+                    <button class="tool" id="step-prev" title="Colis précédent (←)">◀</button>
+                    <button class="tool" id="step-play" title="Lecture / pause (Espace)">▶ Lecture</button>
+                    <button class="tool" id="step-next" title="Colis suivant (→)">▶</button>
+                    <button class="tool" id="step-last" title="Tout afficher (Fin)">⏭</button>
+                </div>
+                <input type="range" id="step-range" min="0" max="0" value="0" aria-label="Choisir l'étape">
+                <span class="where">Étape <b id="step-n">0</b>/<span id="step-total">0</span></span>
+            </div>
+            <div class="plan-foot">
+                <div class="stats"><span>Colis<b id="stat-count">0/0</b></span><span>Volume chargé<b id="stat-vol">0 %</b></span></div>
+                <div class="tools">
+                    <button class="tool" id="recenter-btn" title="Remettre la vue de départ">⌖ Recentrer</button>
+                    <button class="tool" id="replay-btn" title="Revoir le rangement">↻ Rejouer</button>
+                </div>
+            </div>
+            <p class="plan-note" id="plan-note">Ajoutez des colis, puis appuyez sur « Ranger les colis ».</p>
+        </div>
+
+        <div class="result hidden" id="result">
+            <div class="verdict" id="verdict"></div>
+            <div class="legend" id="legend"></div>
+        </div>
+    </section>
+</main>
+
+<dialog class="modal" id="catalog">
+    <div class="modal-in">
+        <div class="modal-head">
+            <span class="label"><b>Choisir un produit</b></span>
+            <button class="icon-btn" id="catalog-close" aria-label="Fermer">×</button>
+        </div>
+        <div class="modal-tools">
+            <input class="input" id="catalog-search" placeholder="Rechercher : frigo, télé, ventilateur…" autocomplete="off">
+            <div class="chips" id="catalog-types"></div>
+        </div>
+        <div class="cat-list" id="catalog-list"></div>
+    </div>
+</dialog>
+
+<div class="tooltip hidden" id="tooltip"></div>
+<div class="toast" id="toast"></div>
+
+<script type="module" src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

@@ -1,898 +1,3764 @@
 [
     {
-        "Produit": "Machine \u00e0 Laver HISENSE Automatique Top Loading-14 Kg Lavage \u2013 Gris titanium",
-        "Longueur (cm)": 234,
-        "Largeur (cm)": 302,
-        "Profondeur (cm)": 315,
-        "Poids (g)": 193136,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "Cong\u00e9lateur Condor vertical \u2013 409L \u2013 super freeze -Inverter \u2013 No Frost \u2013 convertible \u2013 Inox",
-        "Longueur (cm)": 407,
-        "Largeur (cm)": 428,
-        "Profondeur (cm)": 274,
-        "Poids (g)": 157493,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "Machine \u00e0 Laver CONDOR Frontal \u2013 6kg \u2013 1000 tr/min \u2013 Blanche",
-        "Longueur (cm)": 389,
-        "Largeur (cm)": 341,
-        "Profondeur (cm)": 401,
-        "Poids (g)": 135983,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 Rouge agate",
-        "Longueur (cm)": 252,
-        "Largeur (cm)": 197,
-        "Profondeur (cm)": 328,
-        "Poids (g)": 146960,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 244,
-        "Largeur (cm)": 247,
-        "Profondeur (cm)": 415,
-        "Poids (g)": 188816,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "Machine \u00e0 Laver CONDOR Top loading \u2013 10,5 kg \u2013 Darck Silver",
-        "Longueur (cm)": 131,
-        "Largeur (cm)": 204,
-        "Profondeur (cm)": 149,
-        "Poids (g)": 131151,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 Blanc",
-        "Longueur (cm)": 433,
-        "Largeur (cm)": 455,
-        "Profondeur (cm)": 194,
-        "Poids (g)": 105690,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 191,
-        "Largeur (cm)": 295,
-        "Profondeur (cm)": 140,
-        "Poids (g)": 174822,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 Gris",
-        "Longueur (cm)": 461,
-        "Largeur (cm)": 444,
-        "Profondeur (cm)": 225,
-        "Poids (g)": 108548,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 Gris",
-        "Longueur (cm)": 198,
-        "Largeur (cm)": 495,
-        "Profondeur (cm)": 167,
-        "Poids (g)": 124388,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 353,
-        "Largeur (cm)": 347,
-        "Profondeur (cm)": 366,
-        "Poids (g)": 199548,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 423,
-        "Largeur (cm)": 282,
-        "Profondeur (cm)": 447,
-        "Poids (g)": 100126,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "Lave-Vaisselle CONDOR LUXA 16 Couverts \u2013 Inox noir",
-        "Longueur (cm)": 171,
-        "Largeur (cm)": 486,
-        "Profondeur (cm)": 362,
-        "Poids (g)": 131195,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "Machine \u00e0 Laver CONDOR Frontal \u2013 6kg \u2013 1000 tr/min \u2013 Grise",
-        "Longueur (cm)": 481,
-        "Largeur (cm)": 484,
-        "Profondeur (cm)": 186,
-        "Poids (g)": 108007,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 483,
-        "Largeur (cm)": 235,
-        "Profondeur (cm)": 460,
-        "Poids (g)": 191613,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 Gris",
-        "Longueur (cm)": 181,
-        "Largeur (cm)": 143,
-        "Profondeur (cm)": 315,
-        "Poids (g)": 151639,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 417,
-        "Largeur (cm)": 436,
-        "Profondeur (cm)": 410,
-        "Poids (g)": 182885,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 170,
-        "Largeur (cm)": 269,
-        "Profondeur (cm)": 337,
-        "Poids (g)": 182138,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 163,
-        "Largeur (cm)": 433,
-        "Profondeur (cm)": 130,
-        "Poids (g)": 105177,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 327,
-        "Largeur (cm)": 356,
-        "Profondeur (cm)": 463,
-        "Poids (g)": 102985,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 483,
-        "Largeur (cm)": 289,
-        "Profondeur (cm)": 138,
-        "Poids (g)": 198240,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 146,
-        "Largeur (cm)": 127,
-        "Profondeur (cm)": 461,
-        "Poids (g)": 126840,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 223,
-        "Largeur (cm)": 136,
-        "Profondeur (cm)": 436,
-        "Poids (g)": 147250,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 281,
-        "Largeur (cm)": 421,
-        "Profondeur (cm)": 111,
-        "Poids (g)": 199691,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 431,
-        "Largeur (cm)": 468,
-        "Profondeur (cm)": 455,
-        "Poids (g)": 196995,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 341,
-        "Largeur (cm)": 262,
-        "Profondeur (cm)": 137,
-        "Poids (g)": 101962,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 233,
-        "Largeur (cm)": 401,
-        "Profondeur (cm)": 383,
-        "Poids (g)": 146662,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 205,
-        "Largeur (cm)": 212,
-        "Profondeur (cm)": 194,
-        "Poids (g)": 111204,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 296,
-        "Largeur (cm)": 377,
-        "Profondeur (cm)": 492,
-        "Poids (g)": 142250,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 160,
-        "Largeur (cm)": 163,
-        "Profondeur (cm)": 260,
-        "Poids (g)": 198007,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 125,
-        "Largeur (cm)": 258,
-        "Profondeur (cm)": 188,
-        "Poids (g)": 151331,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 138,
-        "Largeur (cm)": 287,
-        "Profondeur (cm)": 240,
-        "Poids (g)": 186767,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 219,
-        "Largeur (cm)": 235,
-        "Profondeur (cm)": 323,
-        "Poids (g)": 140580,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 260,
-        "Largeur (cm)": 307,
-        "Profondeur (cm)": 406,
-        "Poids (g)": 114065,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 426,
-        "Largeur (cm)": 464,
-        "Profondeur (cm)": 184,
-        "Poids (g)": 177702,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 128,
-        "Largeur (cm)": 240,
-        "Profondeur (cm)": 182,
-        "Poids (g)": 192907,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 441,
-        "Largeur (cm)": 434,
-        "Profondeur (cm)": 383,
-        "Poids (g)": 159410,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 281,
-        "Largeur (cm)": 418,
-        "Profondeur (cm)": 259,
-        "Poids (g)": 195103,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 156,
-        "Largeur (cm)": 428,
-        "Profondeur (cm)": 291,
-        "Poids (g)": 183465,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 494,
-        "Largeur (cm)": 326,
-        "Profondeur (cm)": 412,
-        "Poids (g)": 146577,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 178,
-        "Largeur (cm)": 327,
-        "Profondeur (cm)": 339,
-        "Poids (g)": 160270,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 492,
-        "Largeur (cm)": 429,
-        "Profondeur (cm)": 326,
-        "Poids (g)": 197861,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 325,
-        "Largeur (cm)": 342,
-        "Profondeur (cm)": 418,
-        "Poids (g)": 190996,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 352,
-        "Largeur (cm)": 415,
-        "Profondeur (cm)": 267,
-        "Poids (g)": 167800,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 424,
-        "Largeur (cm)": 267,
-        "Profondeur (cm)": 435,
-        "Poids (g)": 187564,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 243,
-        "Largeur (cm)": 160,
-        "Profondeur (cm)": 280,
-        "Poids (g)": 183661,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 191,
-        "Largeur (cm)": 185,
-        "Profondeur (cm)": 446,
-        "Poids (g)": 139459,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 411,
-        "Largeur (cm)": 332,
-        "Profondeur (cm)": 310,
-        "Poids (g)": 193742,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 243,
-        "Largeur (cm)": 326,
-        "Profondeur (cm)": 417,
-        "Poids (g)": 199959,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 171,
-        "Largeur (cm)": 241,
-        "Profondeur (cm)": 158,
-        "Poids (g)": 185098,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 107,
-        "Largeur (cm)": 487,
-        "Profondeur (cm)": 305,
-        "Poids (g)": 192416,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 480,
-        "Largeur (cm)": 478,
-        "Profondeur (cm)": 198,
-        "Poids (g)": 194385,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 427,
-        "Largeur (cm)": 172,
-        "Profondeur (cm)": 451,
-        "Poids (g)": 192219,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 484,
-        "Largeur (cm)": 157,
-        "Profondeur (cm)": 447,
-        "Poids (g)": 197834,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 318,
-        "Largeur (cm)": 210,
-        "Profondeur (cm)": 225,
-        "Poids (g)": 190658,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 402,
-        "Largeur (cm)": 319,
-        "Profondeur (cm)": 200,
-        "Poids (g)": 196226,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 345,
-        "Largeur (cm)": 415,
-        "Profondeur (cm)": 284,
-        "Poids (g)": 199911,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 371,
-        "Largeur (cm)": 304,
-        "Profondeur (cm)": 414,
-        "Poids (g)": 199971,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 474,
-        "Largeur (cm)": 333,
-        "Profondeur (cm)": 158,
-        "Poids (g)": 199999,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 131,
-        "Largeur (cm)": 416,
-        "Profondeur (cm)": 442,
-        "Poids (g)": 199999,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 227,
-        "Largeur (cm)": 499,
-        "Profondeur (cm)": 371,
-        "Poids (g)": 199999,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 450,
-        "Largeur (cm)": 123,
-        "Profondeur (cm)": 489,
-        "Poids (g)": 199999,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 388,
-        "Largeur (cm)": 456,
-        "Profondeur (cm)": 210,
-        "Poids (g)": 199999,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 312,
-        "Largeur (cm)": 188,
-        "Profondeur (cm)": 470,
-        "Poids (g)": 199999,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 145,
-        "Largeur (cm)": 430,
-        "Profondeur (cm)": 490,
-        "Poids (g)": 199999,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 477,
-        "Largeur (cm)": 201,
-        "Profondeur (cm)": 255,
-        "Poids (g)": 199999,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 276,
-        "Largeur (cm)": 390,
-        "Profondeur (cm)": 350,
-        "Poids (g)": 199999,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 399,
-        "Largeur (cm)": 170,
-        "Profondeur (cm)": 450,
-        "Poids (g)": 199999,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 250,
-        "Largeur (cm)": 488,
-        "Profondeur (cm)": 277,
-        "Poids (g)": 199999,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 100,
-        "Largeur (cm)": 400,
-        "Profondeur (cm)": 500,
-        "Poids (g)": 199999,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 410,
-        "Largeur (cm)": 220,
-        "Profondeur (cm)": 390,
-        "Poids (g)": 199999,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 180,
-        "Largeur (cm)": 350,
-        "Profondeur (cm)": 470,
-        "Poids (g)": 199999,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 330,
-        "Largeur (cm)": 100,
-        "Profondeur (cm)": 290,
-        "Poids (g)": 199999,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 290,
-        "Largeur (cm)": 270,
-        "Profondeur (cm)": 110,
-        "Poids (g)": 199999,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 110,
-        "Largeur (cm)": 190,
-        "Profondeur (cm)": 220,
-        "Poids (g)": 199999,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 260,
-        "Largeur (cm)": 110,
-        "Profondeur (cm)": 440,
-        "Poids (g)": 199999,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 440,
-        "Largeur (cm)": 440,
-        "Profondeur (cm)": 360,
-        "Poids (g)": 199999,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 360,
-        "Largeur (cm)": 360,
-        "Profondeur (cm)": 180,
-        "Poids (g)": 199999,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 180,
-        "Largeur (cm)": 280,
-        "Profondeur (cm)": 100,
-        "Poids (g)": 199999,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 100,
-        "Largeur (cm)": 200,
-        "Profondeur (cm)": 310,
-        "Poids (g)": 199999,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 310,
-        "Largeur (cm)": 120,
-        "Profondeur (cm)": 230,
-        "Poids (g)": 199999,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 230,
-        "Largeur (cm)": 40,
-        "Profondeur (cm)": 450,
-        "Poids (g)": 199999,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 450,
-        "Largeur (cm)": 370,
-        "Profondeur (cm)": 370,
-        "Poids (g)": 199999,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 370,
-        "Largeur (cm)": 290,
-        "Profondeur (cm)": 190,
-        "Poids (g)": 199999,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 190,
-        "Largeur (cm)": 210,
-        "Profondeur (cm)": 120,
-        "Poids (g)": 199999,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 120,
-        "Largeur (cm)": 130,
-        "Profondeur (cm)": 40,
-        "Poids (g)": 199999,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 40,
-        "Largeur (cm)": 50,
-        "Profondeur (cm)": 360,
-        "Poids (g)": 199999,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 360,
-        "Largeur (cm)": 380,
-        "Profondeur (cm)": 280,
-        "Poids (g)": 199999,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 280,
-        "Largeur (cm)": 300,
-        "Profondeur (cm)": 200,
-        "Poids (g)": 199999,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 200,
-        "Largeur (cm)": 220,
-        "Profondeur (cm)": 130,
-        "Poids (g)": 199999,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 130,
-        "Largeur (cm)": 140,
-        "Profondeur (cm)": 50,
-        "Poids (g)": 199999,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 50,
-        "Largeur (cm)": 60,
-        "Profondeur (cm)": 370,
-        "Poids (g)": 199999,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 370,
-        "Largeur (cm)": 390,
-        "Profondeur (cm)": 290,
-        "Poids (g)": 199999,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 290,
-        "Largeur (cm)": 310,
-        "Profondeur (cm)": 210,
-        "Poids (g)": 199999,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 210,
-        "Largeur (cm)": 230,
-        "Profondeur (cm)": 140,
-        "Poids (g)": 199999,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 140,
-        "Largeur (cm)": 150,
-        "Profondeur (cm)": 60,
-        "Poids (g)": 199999,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 60,
-        "Largeur (cm)": 70,
-        "Profondeur (cm)": 380,
-        "Poids (g)": 199999,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 380,
-        "Largeur (cm)": 400,
-        "Profondeur (cm)": 300,
-        "Poids (g)": 199999,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 300,
-        "Largeur (cm)": 320,
-        "Profondeur (cm)": 220,
-        "Poids (g)": 199999,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 220,
-        "Largeur (cm)": 240,
-        "Profondeur (cm)": 150,
-        "Poids (g)": 199999,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 150,
-        "Largeur (cm)": 160,
-        "Profondeur (cm)": 70,
-        "Poids (g)": 199999,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 70,
-        "Largeur (cm)": 80,
-        "Profondeur (cm)": 390,
-        "Poids (g)": 199999,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 390,
-        "Largeur (cm)": 410,
-        "Profondeur (cm)": 310,
-        "Poids (g)": 199999,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 310,
-        "Largeur (cm)": 330,
-        "Profondeur (cm)": 230,
-        "Poids (g)": 199999,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 230,
-        "Largeur (cm)": 250,
-        "Profondeur (cm)": 160,
-        "Poids (g)": 199999,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 160,
-        "Largeur (cm)": 170,
-        "Profondeur (cm)": 80,
-        "Poids (g)": 199999,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 80,
-        "Largeur (cm)": 90,
-        "Profondeur (cm)": 400,
-        "Poids (g)": 199999,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 400,
-        "Largeur (cm)": 420,
-        "Profondeur (cm)": 320,
-        "Poids (g)": 199999,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 320,
-        "Largeur (cm)": 340,
-        "Profondeur (cm)": 240,
-        "Poids (g)": 199999,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 240,
-        "Largeur (cm)": 260,
-        "Profondeur (cm)": 170,
-        "Poids (g)": 199999,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 170,
-        "Largeur (cm)": 180,
-        "Profondeur (cm)": 90,
-        "Poids (g)": 199999,
-        "Type": "\u00c9lectrom\u00e9nager"
-    },
-    {
-        "Produit": "R\u00e9frig\u00e9rateur CONDOR Double porte \u2013 465 L \u2013 Nofrost \u2013 INOX",
-        "Longueur (cm)": 90,
-        "Largeur (cm)": 100,
-        "Profondeur (cm)": 410,
-        "Poids (g)": 199999,
-        "Type": "\u00c9lectrom\u00e9nager"
+        "Product": "ANKER 322 USB-A TO USB-C CABLE (3FT BRAIDED) black",
+        "Type": "Câbles et accessoires électroniques",
+        "Depth (m)": 0.15,
+        "Width (m)": 0.1,
+        "Height (m)": 0.03,
+        "Weight (kg)": 0.07,
+        "Allowed Orientations": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+        ],
+        "LBS (kg)": 0.5,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "ANKER NEW NYLON USB-C TO USB-C 2.0 CABLE 3.3FT black",
+        "Type": "Câbles et accessoires électroniques",
+        "Depth (m)": 0.15,
+        "Width (m)": 0.1,
+        "Height (m)": 0.03,
+        "Weight (kg)": 0.07,
+        "Allowed Orientations": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+        ],
+        "LBS (kg)": 0.5,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "ANKER NEW NYLON USB-C TO USB-C 2.0 CABLE 6FT black",
+        "Type": "Câbles et accessoires électroniques",
+        "Depth (m)": 0.18,
+        "Width (m)": 0.12,
+        "Height (m)": 0.03,
+        "Weight (kg)": 0.1,
+        "Allowed Orientations": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+        ],
+        "LBS (kg)": 0.5,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Batteur à main Cristor – 150W – 5 Vitesse – Gris_Noir",
+        "Type": "Appareils électroménagers",
+        "Depth (m)": 0.25,
+        "Width (m)": 0.15,
+        "Height (m)": 0.1,
+        "Weight (kg)": 1.2,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 1.8,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Tefal Perfectbake Lot de 4 Moules A Tartelettes 11cm",
+        "Type": "Ustensiles de cuisine",
+        "Depth (m)": 0.2,
+        "Width (m)": 0.2,
+        "Height (m)": 0.05,
+        "Weight (kg)": 0.6,
+        "Allowed Orientations": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+        ],
+        "LBS (kg)": 1.8,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Batteur à main CONDOR MASTER MIX – 400 W – 5 Vitesses – Noir_Inox",
+        "Type": "Appareils électroménagers",
+        "Depth (m)": 0.25,
+        "Width (m)": 0.15,
+        "Height (m)": 0.1,
+        "Weight (kg)": 1.5,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 2.3,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Tefal Easy Grip Gold Springform Cake Mold 27cm J1626345",
+        "Type": "Ustensiles de cuisine",
+        "Depth (m)": 0.3,
+        "Width (m)": 0.3,
+        "Height (m)": 0.05,
+        "Weight (kg)": 0.9,
+        "Allowed Orientations": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+        ],
+        "LBS (kg)": 2.7,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Tefal Poêle – 24 CM – Generous Cook Induction – Antiadhésif – Noir – C2780483",
+        "Type": "Ustensiles de cuisine",
+        "Depth (m)": 0.28,
+        "Width (m)": 0.28,
+        "Height (m)": 0.05,
+        "Weight (kg)": 1.2,
+        "Allowed Orientations": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+        ],
+        "LBS (kg)": 3.6,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "TEFAL POELE UNLIMITED 20CM G2550243",
+        "Type": "Ustensiles de cuisine",
+        "Depth (m)": 0.24,
+        "Width (m)": 0.24,
+        "Height (m)": 0.05,
+        "Weight (kg)": 1.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+        ],
+        "LBS (kg)": 3.0,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Friteuse Moulinex FRY UNO",
+        "Type": "Appareils électroménagers",
+        "Depth (m)": 0.3,
+        "Width (m)": 0.3,
+        "Height (m)": 0.3,
+        "Weight (kg)": 3.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 3.6,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Friteuse sans huile TEFAL Easy Fry Essential 3,5 L Noir",
+        "Type": "Appareils électroménagers",
+        "Depth (m)": 0.32,
+        "Width (m)": 0.28,
+        "Height (m)": 0.3,
+        "Weight (kg)": 3.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 5.0,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "FRITEUSE SEMI-PROFESSIONNELLE TEFAL EASY PRO PREMIUM",
+        "Type": "Appareils électroménagers",
+        "Depth (m)": 0.3,
+        "Width (m)": 0.3,
+        "Height (m)": 0.3,
+        "Weight (kg)": 3.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 3.6,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "FRITEUSE SUPER UNO MOULINEX",
+        "Type": "Appareils électroménagers",
+        "Depth (m)": 0.3,
+        "Width (m)": 0.3,
+        "Height (m)": 0.3,
+        "Weight (kg)": 3.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 3.6,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Friteuse Moulinex FRY UNO",
+        "Type": "Appareils électroménagers",
+        "Depth (m)": 0.3,
+        "Width (m)": 0.3,
+        "Height (m)": 0.3,
+        "Weight (kg)": 3.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 3.6,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Grille pain – moderne – 2 Tranches – 870W – NOIR",
+        "Type": "Appareils électroménagers",
+        "Depth (m)": 0.3,
+        "Width (m)": 0.15,
+        "Height (m)": 0.2,
+        "Weight (kg)": 1.5,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 2.3,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Grille-pain Moulinex",
+        "Type": "Appareils électroménagers",
+        "Depth (m)": 0.3,
+        "Width (m)": 0.15,
+        "Height (m)": 0.2,
+        "Weight (kg)": 1.5,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 2.3,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Grille Pain NARDI – Argenté – 2 Tranches – 1050W",
+        "Type": "Appareils électroménagers",
+        "Depth (m)": 0.3,
+        "Width (m)": 0.15,
+        "Height (m)": 0.2,
+        "Weight (kg)": 1.5,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 2.3,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Grille pain – Rétro – 2 Tranches – 1050W – Orange + argent",
+        "Type": "Appareils électroménagers",
+        "Depth (m)": 0.3,
+        "Width (m)": 0.15,
+        "Height (m)": 0.2,
+        "Weight (kg)": 1.5,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 2.3,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Grille pain – Rétro – 2 Tranches – 1050W – Noir + argent",
+        "Type": "Appareils électroménagers",
+        "Depth (m)": 0.3,
+        "Width (m)": 0.15,
+        "Height (m)": 0.2,
+        "Weight (kg)": 1.5,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 2.3,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Machine A Café 3 en 1 CRISTOR Capsules et Café moulu -20 BARS-1100 W- Noir Inox",
+        "Type": "Appareils électroménagers",
+        "Depth (m)": 0.3,
+        "Width (m)": 0.2,
+        "Height (m)": 0.35,
+        "Weight (kg)": 5.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 5.0,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Machine A Café Barista 2 en1 CONDOR – ROBUSTA SERIES -Capsules et Café moulu -20 BARS-1100 W- Noire",
+        "Type": "Appareils électroménagers",
+        "Depth (m)": 0.3,
+        "Width (m)": 0.2,
+        "Height (m)": 0.35,
+        "Weight (kg)": 5.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 5.0,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Machine A Café Barista 2 en1 CONDOR – ROBUSTA SERIES -Capsules et Café moulu -20 BARS-1100 W- Bleu Marine",
+        "Type": "Appareils électroménagers",
+        "Depth (m)": 0.3,
+        "Width (m)": 0.2,
+        "Height (m)": 0.35,
+        "Weight (kg)": 5.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 5.0,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Machine A Café Barista 2 en1 CONDOR – ROBUSTA SERIES -Capsules et Café moulu -20 BARS-1100 W-Marron",
+        "Type": "Appareils électroménagers",
+        "Depth (m)": 0.3,
+        "Width (m)": 0.2,
+        "Height (m)": 0.35,
+        "Weight (kg)": 5.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 5.0,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Air E2544404 Cocotte en aluminium 20 cm",
+        "Type": "Ustensiles de cuisine",
+        "Depth (m)": 0.22,
+        "Width (m)": 0.22,
+        "Height (m)": 0.1,
+        "Weight (kg)": 0.9,
+        "Allowed Orientations": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+        ],
+        "LBS (kg)": 2.7,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Cocotte AIR en aluminium Tefal 24 cm",
+        "Type": "Ustensiles de cuisine",
+        "Depth (m)": 0.28,
+        "Width (m)": 0.28,
+        "Height (m)": 0.05,
+        "Weight (kg)": 1.2,
+        "Allowed Orientations": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+        ],
+        "LBS (kg)": 3.6,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Tefal AIR Cocotte en aluminium 30 x 23 cm",
+        "Type": "Ustensiles de cuisine",
+        "Depth (m)": 0.35,
+        "Width (m)": 0.35,
+        "Height (m)": 0.05,
+        "Weight (kg)": 1.5,
+        "Allowed Orientations": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+        ],
+        "LBS (kg)": 4.5,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Lov E2580404 Cocotte en fonte 25 cm",
+        "Type": "Ustensiles de cuisine",
+        "Depth (m)": 0.28,
+        "Width (m)": 0.28,
+        "Height (m)": 0.05,
+        "Weight (kg)": 1.2,
+        "Allowed Orientations": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+        ],
+        "LBS (kg)": 3.6,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Lov E2600404 Cocotte en fonte 25 cm",
+        "Type": "Ustensiles de cuisine",
+        "Depth (m)": 0.28,
+        "Width (m)": 0.28,
+        "Height (m)": 0.05,
+        "Weight (kg)": 1.2,
+        "Allowed Orientations": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+        ],
+        "LBS (kg)": 3.6,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Chauffe eau à gaz CONDOR – 6 L – Afficheur",
+        "Type": "Ventilateurs et climatisation",
+        "Depth (m)": 0.35,
+        "Width (m)": 0.2,
+        "Height (m)": 0.55,
+        "Weight (kg)": 10.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 3.0,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Chauffe eau à gaz NARDI – 6 L – Afficheur – Blanc",
+        "Type": "Ventilateurs et climatisation",
+        "Depth (m)": 0.35,
+        "Width (m)": 0.2,
+        "Height (m)": 0.55,
+        "Weight (kg)": 10.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 3.0,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Chauffe eau Eléctrique NARDI – 50 L",
+        "Type": "Ventilateurs et climatisation",
+        "Depth (m)": 0.45,
+        "Width (m)": 0.45,
+        "Height (m)": 0.6,
+        "Weight (kg)": 10.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 3.0,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Chauffe eau à gaz CONDOR – 10 L – Afficheur",
+        "Type": "Ventilateurs et climatisation",
+        "Depth (m)": 0.4,
+        "Width (m)": 0.22,
+        "Height (m)": 0.65,
+        "Weight (kg)": 10.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 3.0,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Chauffe eau à gaz NARDI – 6 L",
+        "Type": "Ventilateurs et climatisation",
+        "Depth (m)": 0.35,
+        "Width (m)": 0.2,
+        "Height (m)": 0.55,
+        "Weight (kg)": 10.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 3.0,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Chauffe eau Eléctrique NARDI – 85 L",
+        "Type": "Ventilateurs et climatisation",
+        "Depth (m)": 0.5,
+        "Width (m)": 0.5,
+        "Height (m)": 0.9,
+        "Weight (kg)": 10.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 3.0,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Chauffe eau à gaz NARDI – 10 L – Afficheur",
+        "Type": "Ventilateurs et climatisation",
+        "Depth (m)": 0.4,
+        "Width (m)": 0.22,
+        "Height (m)": 0.65,
+        "Weight (kg)": 10.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 3.0,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Chauffe eau à gaz NARDI – 10 L – Afficheur – Noir",
+        "Type": "Ventilateurs et climatisation",
+        "Depth (m)": 0.4,
+        "Width (m)": 0.22,
+        "Height (m)": 0.65,
+        "Weight (kg)": 10.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 3.0,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Chauffe eau à gaz NARDI – 10 L – Afficheur – Gris",
+        "Type": "Ventilateurs et climatisation",
+        "Depth (m)": 0.4,
+        "Width (m)": 0.22,
+        "Height (m)": 0.65,
+        "Weight (kg)": 10.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 3.0,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Micro-Ondes CRISTOR – 20 L – Blanc",
+        "Type": "Électroménager",
+        "Depth (m)": 0.48,
+        "Width (m)": 0.38,
+        "Height (m)": 0.28,
+        "Weight (kg)": 15.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 10.5,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Micro-Ondes CRISTOR – 20 L – Noir",
+        "Type": "Électroménager",
+        "Depth (m)": 0.48,
+        "Width (m)": 0.38,
+        "Height (m)": 0.28,
+        "Weight (kg)": 15.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 10.5,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Micro-ondes CONDOR – 20 L – Noir",
+        "Type": "Électroménager",
+        "Depth (m)": 0.48,
+        "Width (m)": 0.38,
+        "Height (m)": 0.28,
+        "Weight (kg)": 15.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 10.5,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Micro-Ondes CRISTOR – 23 L – Grill – Blanc",
+        "Type": "Électroménager",
+        "Depth (m)": 0.5,
+        "Width (m)": 0.4,
+        "Height (m)": 0.3,
+        "Weight (kg)": 15.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 10.5,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Micro-Ondes CRISTOR – 23 L – Grill – Noir",
+        "Type": "Électroménager",
+        "Depth (m)": 0.5,
+        "Width (m)": 0.4,
+        "Height (m)": 0.3,
+        "Weight (kg)": 15.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 10.5,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Micro-Ondes HISENSE – 20 L- Solo – Blanc",
+        "Type": "Électroménager",
+        "Depth (m)": 0.48,
+        "Width (m)": 0.38,
+        "Height (m)": 0.28,
+        "Weight (kg)": 15.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 10.5,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Micro-ondes CONDOR – 23 L – Grill – Blanc",
+        "Type": "Électroménager",
+        "Depth (m)": 0.5,
+        "Width (m)": 0.4,
+        "Height (m)": 0.3,
+        "Weight (kg)": 40,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 80,
+        "Stackable": 1,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Micro-ondes CONDOR – 23 L – Grill – Noir",
+        "Type": "Électroménager",
+        "Depth (m)": 0.5,
+        "Width (m)": 0.4,
+        "Height (m)": 0.3,
+        "Weight (kg)": 15.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 10.5,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Micro-Ondes HISENSE – 26 L- Solo – Silver",
+        "Type": "Électroménager",
+        "Depth (m)": 0.52,
+        "Width (m)": 0.42,
+        "Height (m)": 0.31,
+        "Weight (kg)": 15.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 10.5,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Micro-ondes NARDI – 23L – Grill – Noir",
+        "Type": "Électroménager",
+        "Depth (m)": 0.5,
+        "Width (m)": 0.4,
+        "Height (m)": 0.3,
+        "Weight (kg)": 15.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 10.5,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Micro-ondes NARDI – 25L – Grill – Gris",
+        "Type": "Électroménager",
+        "Depth (m)": 0.52,
+        "Width (m)": 0.42,
+        "Height (m)": 0.31,
+        "Weight (kg)": 15.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 10.5,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Micro-ondes CONDOR – 30 L – Grill – Silver",
+        "Type": "Électroménager",
+        "Depth (m)": 0.55,
+        "Width (m)": 0.45,
+        "Height (m)": 0.33,
+        "Weight (kg)": 15.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 10.5,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Micro-ondes encastrable CONDOR – 25 L – 900W- Grille – Inox",
+        "Type": "Électroménager",
+        "Depth (m)": 0.52,
+        "Width (m)": 0.42,
+        "Height (m)": 0.31,
+        "Weight (kg)": 15.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 10.5,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Micro-Ondes CRISTOR – 20 L – Blanc",
+        "Type": "Électroménager",
+        "Depth (m)": 0.48,
+        "Width (m)": 0.38,
+        "Height (m)": 0.28,
+        "Weight (kg)": 15.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 10.5,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Micro-Ondes CRISTOR – 20 L – Noir",
+        "Type": "Électroménager",
+        "Depth (m)": 0.48,
+        "Width (m)": 0.38,
+        "Height (m)": 0.28,
+        "Weight (kg)": 15.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 10.5,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Micro-ondes CONDOR – 20 L – Noir",
+        "Type": "Électroménager",
+        "Depth (m)": 0.48,
+        "Width (m)": 0.38,
+        "Height (m)": 0.28,
+        "Weight (kg)": 15.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 10.5,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "TV CRISTOR Série C2 DLED – 32″ – HD",
+        "Type": "Électronique",
+        "Depth (m)": 0.8,
+        "Width (m)": 0.15,
+        "Height (m)": 0.55,
+        "Weight (kg)": 10.0,
+        "Allowed Orientations": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "TV CRISTOR Série M4 – 32″ –",
+        "Type": "Électronique",
+        "Depth (m)": 0.8,
+        "Width (m)": 0.15,
+        "Height (m)": 0.55,
+        "Weight (kg)": 10.0,
+        "Allowed Orientations": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "TV CONDOR Série F4 DLED – 32″ – HD",
+        "Type": "Électronique",
+        "Depth (m)": 0.8,
+        "Width (m)": 0.15,
+        "Height (m)": 0.55,
+        "Weight (kg)": 10.0,
+        "Allowed Orientations": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "TV CONDOR Série D5(530) QLED – 32″ – HD",
+        "Type": "Électronique",
+        "Depth (m)": 0.8,
+        "Width (m)": 0.15,
+        "Height (m)": 0.55,
+        "Weight (kg)": 10.0,
+        "Allowed Orientations": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "TV CRISTOR Série F5 DLED – 32″ – SMART TV – HD",
+        "Type": "Électronique",
+        "Depth (m)": 0.8,
+        "Width (m)": 0.15,
+        "Height (m)": 0.55,
+        "Weight (kg)": 10.0,
+        "Allowed Orientations": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "TV CRISTOR Série M5 – 32″ – ANDROID TV",
+        "Type": "Électronique",
+        "Depth (m)": 0.8,
+        "Width (m)": 0.15,
+        "Height (m)": 0.55,
+        "Weight (kg)": 10.0,
+        "Allowed Orientations": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "TV CONDOR Série G6 DLED – 32″ – GOOGLE TV – HD",
+        "Type": "Électronique",
+        "Depth (m)": 0.8,
+        "Width (m)": 0.15,
+        "Height (m)": 0.55,
+        "Weight (kg)": 10.0,
+        "Allowed Orientations": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "TV CONDOR Série T4 (400) DLED – 40″ – FHD",
+        "Type": "Électronique",
+        "Depth (m)": 1.05,
+        "Width (m)": 0.15,
+        "Height (m)": 0.68,
+        "Weight (kg)": 10.0,
+        "Allowed Orientations": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "TV CONDOR Série G6 DLED – 32″ – GOOGLE TV – HD",
+        "Type": "Électronique",
+        "Depth (m)": 0.8,
+        "Width (m)": 0.15,
+        "Height (m)": 0.55,
+        "Weight (kg)": 10.0,
+        "Allowed Orientations": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Hisense Smart TV HD 32′ / Série A4",
+        "Type": "Électronique",
+        "Depth (m)": 0.8,
+        "Width (m)": 0.15,
+        "Height (m)": 0.55,
+        "Weight (kg)": 10.0,
+        "Allowed Orientations": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "TV CONDOR Série T4 (400) DLED – 43″ – FHD",
+        "Type": "Électronique",
+        "Depth (m)": 1.05,
+        "Width (m)": 0.15,
+        "Height (m)": 0.68,
+        "Weight (kg)": 10.0,
+        "Allowed Orientations": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "TV CONDOR Série G6 DLED – 40″ – GOOGLE TV – FHD",
+        "Type": "Électronique",
+        "Depth (m)": 1.05,
+        "Width (m)": 0.15,
+        "Height (m)": 0.68,
+        "Weight (kg)": 10.0,
+        "Allowed Orientations": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "TV CRISTOR Série A4 DLED – 43″ – ANDROID TV – FHD",
+        "Type": "Électronique",
+        "Depth (m)": 1.05,
+        "Width (m)": 0.15,
+        "Height (m)": 0.68,
+        "Weight (kg)": 10.0,
+        "Allowed Orientations": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "TV CONDOR Série G6 DLED – 43″ – Google TV – Full HD",
+        "Type": "Électronique",
+        "Depth (m)": 1.05,
+        "Width (m)": 0.15,
+        "Height (m)": 0.68,
+        "Weight (kg)": 10.0,
+        "Allowed Orientations": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "TV CONDOR Série G6 DLED – 43″ – GOOGLE TV – FHD",
+        "Type": "Électronique",
+        "Depth (m)": 1.05,
+        "Width (m)": 0.15,
+        "Height (m)": 0.68,
+        "Weight (kg)": 10.0,
+        "Allowed Orientations": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Hisense Smart TV FHD 43′ / Série A4K",
+        "Type": "Électronique",
+        "Depth (m)": 1.05,
+        "Width (m)": 0.15,
+        "Height (m)": 0.68,
+        "Weight (kg)": 10.0,
+        "Allowed Orientations": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "TV CONDOR Série M5 DLED – 43″ – Android TV – Full HD",
+        "Type": "Électronique",
+        "Depth (m)": 1.05,
+        "Width (m)": 0.15,
+        "Height (m)": 0.68,
+        "Weight (kg)": 10.0,
+        "Allowed Orientations": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "TV CRISTOR Série V7 DLED – 55″ – ANDROID TV – 4K UHD",
+        "Type": "Électronique",
+        "Depth (m)": 1.35,
+        "Width (m)": 0.15,
+        "Height (m)": 0.85,
+        "Weight (kg)": 10.0,
+        "Allowed Orientations": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "TV CONDOR Série G7(730) DLED – 55″ – Google TV – 4K UHD",
+        "Type": "Électronique",
+        "Depth (m)": 1.35,
+        "Width (m)": 0.15,
+        "Height (m)": 0.85,
+        "Weight (kg)": 10.0,
+        "Allowed Orientations": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "TV CONDOR Série G8(840) QLED 120Hz VRR- 50″ – Google TV – 4K UHD",
+        "Type": "Électronique",
+        "Depth (m)": 1.2,
+        "Width (m)": 0.15,
+        "Height (m)": 0.75,
+        "Weight (kg)": 10.0,
+        "Allowed Orientations": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "TV HISENSE Série A6H DLED – 50″ – VIDAA – 4K UHD",
+        "Type": "Électronique",
+        "Depth (m)": 1.2,
+        "Width (m)": 0.15,
+        "Height (m)": 0.75,
+        "Weight (kg)": 10.0,
+        "Allowed Orientations": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Climatiseur CONDOR TENOR Inverter Tropical T3 | 12K Btu | Froid & Chaud | R32",
+        "Type": "Ventilateurs et climatisation",
+        "Depth (m)": 0.9,
+        "Width (m)": 0.3,
+        "Height (m)": 0.4,
+        "Weight (kg)": 20.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 6.0,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Climatiseur Sharp Inverter Tropical 12 000 BTU",
+        "Type": "Ventilateurs et climatisation",
+        "Depth (m)": 0.9,
+        "Width (m)": 0.3,
+        "Height (m)": 0.4,
+        "Weight (kg)": 20.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 6.0,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Climatiseur CONDOR ALPHA Inverter Super Tropical | -15°C ~ +60°C | 12K Btu | Froid & Chaud | R410",
+        "Type": "Ventilateurs et climatisation",
+        "Depth (m)": 0.9,
+        "Width (m)": 0.3,
+        "Height (m)": 0.4,
+        "Weight (kg)": 20.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 6.0,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Climatiseur HISENSE Inverter | T3 Tropical | 12K Btu | Froid / Chaud | R410",
+        "Type": "Ventilateurs et climatisation",
+        "Depth (m)": 0.9,
+        "Width (m)": 0.3,
+        "Height (m)": 0.4,
+        "Weight (kg)": 20.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 6.0,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Climatiseur S BOOST NARDI – Inverter AI – Intelligent – T3 Tropical -15K Btu – Réversible – R32 – Blanc",
+        "Type": "Ventilateurs et climatisation",
+        "Depth (m)": 0.9,
+        "Width (m)": 0.3,
+        "Height (m)": 0.4,
+        "Weight (kg)": 20.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 6.0,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Climatiseur NARDI – Inverter AI- T3 Tropical -15K Btu",
+        "Type": "Ventilateurs et climatisation",
+        "Depth (m)": 0.9,
+        "Width (m)": 0.3,
+        "Height (m)": 0.4,
+        "Weight (kg)": 20.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 6.0,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Climatiseur Mobile Condor 16k BTU | 3 en 1 | Universel | R410a",
+        "Type": "Ventilateurs et climatisation",
+        "Depth (m)": 0.4,
+        "Width (m)": 0.4,
+        "Height (m)": 0.8,
+        "Weight (kg)": 20.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 6.0,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Climatiseur DAIKIN – Inverter – 12K Btu – R32",
+        "Type": "Ventilateurs et climatisation",
+        "Depth (m)": 0.9,
+        "Width (m)": 0.3,
+        "Height (m)": 0.4,
+        "Weight (kg)": 20.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 6.0,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Climatiseur CRISTOR Inverter | T3 Tropical | 18K Btu | Froid et Chaud | R410",
+        "Type": "Ventilateurs et climatisation",
+        "Depth (m)": 1.1,
+        "Width (m)": 0.35,
+        "Height (m)": 0.45,
+        "Weight (kg)": 20.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 6.0,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Climatiseur S BOOST NARDI – Inverter AI – Intelligent – T3 Tropical -21K Btu – Réversible – R32 – Blanc",
+        "Type": "Ventilateurs et climatisation",
+        "Depth (m)": 1.1,
+        "Width (m)": 0.35,
+        "Height (m)": 0.45,
+        "Weight (kg)": 20.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 6.0,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Climatiseur CRISTOR Inverter | T3 Tropical | 24K Btu | Froid et Chaud | R410",
+        "Type": "Ventilateurs et climatisation",
+        "Depth (m)": 1.1,
+        "Width (m)": 0.35,
+        "Height (m)": 0.45,
+        "Weight (kg)": 20.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 6.0,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Congélateur CRISTOR CHILLIA Horizontal Defrost – 142 L – Blanc",
+        "Type": "Électroménager",
+        "Depth (m)": 0.7,
+        "Width (m)": 0.55,
+        "Height (m)": 0.85,
+        "Weight (kg)": 15.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Congélateur CRISTOR CHILLIA Horizontal Defrost – 257 L – Blanc",
+        "Type": "Électroménager",
+        "Depth (m)": 1.1,
+        "Width (m)": 0.65,
+        "Height (m)": 0.85,
+        "Weight (kg)": 15.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Congélateur CONDOR Horizontal CFH-MT26 – 200 Litres",
+        "Type": "Électroménager",
+        "Depth (m)": 0.9,
+        "Width (m)": 0.6,
+        "Height (m)": 0.85,
+        "Weight (kg)": 15.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Congélateur CONDOR Horizontal CFH-MT26 – 200 Litres- GRIS",
+        "Type": "Électroménager",
+        "Depth (m)": 0.9,
+        "Width (m)": 0.6,
+        "Height (m)": 0.85,
+        "Weight (kg)": 15.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Congélateur Condor vertical – 245 L – super freeze – Nofrost -convertible – Inox",
+        "Type": "Électroménager",
+        "Depth (m)": 0.6,
+        "Width (m)": 0.6,
+        "Height (m)": 1.5,
+        "Weight (kg)": 15.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Congélateur Horizontal | Série ACTIV | 390L | Thermostat Electronique | Convertible | Blanc",
+        "Type": "Électroménager",
+        "Depth (m)": 1.3,
+        "Width (m)": 0.7,
+        "Height (m)": 0.85,
+        "Weight (kg)": 15.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Congélateur Condor vertical – 409L – super freeze -Inverter – No Frost – convertible – Inox",
+        "Type": "Électroménager",
+        "Depth (m)": 0.65,
+        "Width (m)": 0.7,
+        "Height (m)": 1.75,
+        "Weight (kg)": 15.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Congélateur Vertical NARDI – 288L",
+        "Type": "Électroménager",
+        "Depth (m)": 0.6,
+        "Width (m)": 0.6,
+        "Height (m)": 1.5,
+        "Weight (kg)": 15.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Congélateur HISENSE vertical – 274 L – super freeze – Nofrost – Inox",
+        "Type": "Électroménager",
+        "Depth (m)": 0.6,
+        "Width (m)": 0.6,
+        "Height (m)": 1.5,
+        "Weight (kg)": 15.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Congélateur Condor vertical – 391 L – super freeze -Inverter – No Frost – convertible – Dark Inox",
+        "Type": "Électroménager",
+        "Depth (m)": 0.65,
+        "Width (m)": 0.7,
+        "Height (m)": 1.75,
+        "Weight (kg)": 15.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Congélateur Vértical CANDY 500-No Frost",
+        "Type": "Électroménager",
+        "Depth (m)": 1.0,
+        "Width (m)": 0.65,
+        "Height (m)": 0.85,
+        "Weight (kg)": 15.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Congélateur Vertical NARDI – 325L",
+        "Type": "Électroménager",
+        "Depth (m)": 0.65,
+        "Width (m)": 0.7,
+        "Height (m)": 1.75,
+        "Weight (kg)": 15.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Machine expresso KRUPS Opio noire",
+        "Type": "Appareils électroménagers",
+        "Depth (m)": 0.3,
+        "Width (m)": 0.2,
+        "Height (m)": 0.35,
+        "Weight (kg)": 5.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 5.0,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "KRUPS Cafetière expresso à pompe",
+        "Type": "Appareils électroménagers",
+        "Depth (m)": 0.3,
+        "Width (m)": 0.2,
+        "Height (m)": 0.35,
+        "Weight (kg)": 5.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 5.0,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Réfrigérateur CONDOR Double porte – 465 L – Nofrost – Rouge agate",
+        "Type": "Électroménager",
+        "Depth (m)": 0.75,
+        "Width (m)": 0.8,
+        "Height (m)": 1.85,
+        "Weight (kg)": 95.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Réfrigérateur CONDOR Double porte – 465 L – Nofrost – INOX",
+        "Type": "Électroménager",
+        "Depth (m)": 0.75,
+        "Width (m)": 0.8,
+        "Height (m)": 1.85,
+        "Weight (kg)": 95.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Réfrigérateur CONDOR Double porte – 465 L – Nofrost – Blanc",
+        "Type": "Électroménager",
+        "Depth (m)": 0.75,
+        "Width (m)": 0.8,
+        "Height (m)": 1.85,
+        "Weight (kg)": 95.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Réfrigérateur CONDOR Double porte – 465 L – Nofrost – INOX",
+        "Type": "Électroménager",
+        "Depth (m)": 0.75,
+        "Width (m)": 0.8,
+        "Height (m)": 1.85,
+        "Weight (kg)": 95.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Réfrigérateur CONDOR Double porte – 465 L – Nofrost – Gris",
+        "Type": "Électroménager",
+        "Depth (m)": 0.75,
+        "Width (m)": 0.8,
+        "Height (m)": 1.85,
+        "Weight (kg)": 95.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Réfrigérateur CONDOR Double porte – 465 L – Nofrost – Gris",
+        "Type": "Électroménager",
+        "Depth (m)": 0.75,
+        "Width (m)": 0.8,
+        "Height (m)": 1.85,
+        "Weight (kg)": 95.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Réfrigérateur CONDOR Double porte – 465 L – Nofrost – INOX",
+        "Type": "Électroménager",
+        "Depth (m)": 0.75,
+        "Width (m)": 0.8,
+        "Height (m)": 1.85,
+        "Weight (kg)": 95.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Réfrigérateur CONDOR Double porte – 465 L – Nofrost – INOX",
+        "Type": "Électroménager",
+        "Depth (m)": 0.75,
+        "Width (m)": 0.8,
+        "Height (m)": 1.85,
+        "Weight (kg)": 95.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Réfrigérateur CONDOR Double porte – 465 L – Nofrost – INOX",
+        "Type": "Électroménager",
+        "Depth (m)": 0.75,
+        "Width (m)": 0.8,
+        "Height (m)": 1.85,
+        "Weight (kg)": 95.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Réfrigérateur CONDOR Double porte – 465 L – Nofrost – Gris",
+        "Type": "Électroménager",
+        "Depth (m)": 0.75,
+        "Width (m)": 0.8,
+        "Height (m)": 1.85,
+        "Weight (kg)": 95.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Réfrigérateur CONDOR Double porte – 465 L – Nofrost – INOX",
+        "Type": "Électroménager",
+        "Depth (m)": 0.75,
+        "Width (m)": 0.8,
+        "Height (m)": 1.85,
+        "Weight (kg)": 95.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Réfrigérateur CONDOR Double porte – 465 L – Nofrost – INOX",
+        "Type": "Électroménager",
+        "Depth (m)": 0.75,
+        "Width (m)": 0.8,
+        "Height (m)": 1.85,
+        "Weight (kg)": 95.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Réfrigérateur CONDOR Double porte – 465 L – Nofrost – INOX",
+        "Type": "Électroménager",
+        "Depth (m)": 0.75,
+        "Width (m)": 0.8,
+        "Height (m)": 1.85,
+        "Weight (kg)": 95.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Réfrigérateur CONDOR Double porte – 465 L – Nofrost – INOX",
+        "Type": "Électroménager",
+        "Depth (m)": 0.75,
+        "Width (m)": 0.8,
+        "Height (m)": 1.85,
+        "Weight (kg)": 95.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Réfrigérateur CONDOR Double porte – 465 L – Nofrost – INOX",
+        "Type": "Électroménager",
+        "Depth (m)": 0.75,
+        "Width (m)": 0.8,
+        "Height (m)": 1.85,
+        "Weight (kg)": 95.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 200,
+        "Stackable": 1,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Réfrigérateur CONDOR Double porte – 465 L – Nofrost – INOX",
+        "Type": "Électroménager",
+        "Depth (m)": 0.75,
+        "Width (m)": 0.8,
+        "Height (m)": 1.85,
+        "Weight (kg)": 95.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Réfrigérateur CONDOR Double porte – 465 L – Nofrost – INOX",
+        "Type": "Électroménager",
+        "Depth (m)": 0.75,
+        "Width (m)": 0.8,
+        "Height (m)": 1.85,
+        "Weight (kg)": 95.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Réfrigérateur CONDOR Double porte – 465 L – Nofrost – INOX",
+        "Type": "Électroménager",
+        "Depth (m)": 0.75,
+        "Width (m)": 0.8,
+        "Height (m)": 1.85,
+        "Weight (kg)": 95.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Réfrigérateur CONDOR Double porte – 465 L – Nofrost – INOX",
+        "Type": "Électroménager",
+        "Depth (m)": 0.75,
+        "Width (m)": 0.8,
+        "Height (m)": 1.85,
+        "Weight (kg)": 95.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Réfrigérateur CONDOR Double porte – 465 L – Nofrost – INOX",
+        "Type": "Électroménager",
+        "Depth (m)": 0.75,
+        "Width (m)": 0.8,
+        "Height (m)": 1.85,
+        "Weight (kg)": 95.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Réfrigérateur CONDOR Double porte – 465 L – Nofrost – INOX",
+        "Type": "Électroménager",
+        "Depth (m)": 0.75,
+        "Width (m)": 0.8,
+        "Height (m)": 1.85,
+        "Weight (kg)": 95.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Réfrigérateur CONDOR Double porte – 465 L – Nofrost – INOX",
+        "Type": "Électroménager",
+        "Depth (m)": 0.75,
+        "Width (m)": 0.8,
+        "Height (m)": 1.85,
+        "Weight (kg)": 95.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Réfrigérateur CONDOR Double porte – 465 L – Nofrost – INOX",
+        "Type": "Électroménager",
+        "Depth (m)": 0.75,
+        "Width (m)": 0.8,
+        "Height (m)": 1.85,
+        "Weight (kg)": 95.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Réfrigérateur CONDOR Double porte – 465 L – Nofrost – INOX",
+        "Type": "Électroménager",
+        "Depth (m)": 0.75,
+        "Width (m)": 0.8,
+        "Height (m)": 1.85,
+        "Weight (kg)": 95.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Réfrigérateur CONDOR Double porte – 465 L – Nofrost – INOX",
+        "Type": "Électroménager",
+        "Depth (m)": 0.75,
+        "Width (m)": 0.8,
+        "Height (m)": 1.85,
+        "Weight (kg)": 95.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Réfrigérateur CONDOR Double porte – 465 L – Nofrost – INOX",
+        "Type": "Électroménager",
+        "Depth (m)": 0.75,
+        "Width (m)": 0.8,
+        "Height (m)": 1.85,
+        "Weight (kg)": 95.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Réfrigérateur CONDOR Double porte – 465 L – Nofrost – INOX",
+        "Type": "Électroménager",
+        "Depth (m)": 0.75,
+        "Width (m)": 0.8,
+        "Height (m)": 1.85,
+        "Weight (kg)": 95.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Réfrigérateur CONDOR Double porte – 465 L – Nofrost – INOX",
+        "Type": "Électroménager",
+        "Depth (m)": 0.75,
+        "Width (m)": 0.8,
+        "Height (m)": 1.85,
+        "Weight (kg)": 95.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Réfrigérateur CONDOR Double porte – 465 L – Nofrost – INOX",
+        "Type": "Électroménager",
+        "Depth (m)": 0.75,
+        "Width (m)": 0.8,
+        "Height (m)": 1.85,
+        "Weight (kg)": 95.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Réfrigérateur CONDOR Double porte – 465 L – Nofrost – INOX",
+        "Type": "Électroménager",
+        "Depth (m)": 0.75,
+        "Width (m)": 0.8,
+        "Height (m)": 1.85,
+        "Weight (kg)": 95.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Réfrigérateur CONDOR Double porte – 465 L – Nofrost – INOX",
+        "Type": "Électroménager",
+        "Depth (m)": 0.75,
+        "Width (m)": 0.8,
+        "Height (m)": 1.85,
+        "Weight (kg)": 95.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Réfrigérateur CONDOR Double porte – 465 L – Nofrost – INOX",
+        "Type": "Électroménager",
+        "Depth (m)": 0.75,
+        "Width (m)": 0.8,
+        "Height (m)": 1.85,
+        "Weight (kg)": 95.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Réfrigérateur CONDOR Double porte – 465 L – Nofrost – INOX",
+        "Type": "Électroménager",
+        "Depth (m)": 0.75,
+        "Width (m)": 0.8,
+        "Height (m)": 1.85,
+        "Weight (kg)": 95.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Réfrigérateur CONDOR Double porte – 465 L – Nofrost – INOX",
+        "Type": "Électroménager",
+        "Depth (m)": 0.75,
+        "Width (m)": 0.8,
+        "Height (m)": 1.85,
+        "Weight (kg)": 95.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Machine à Laver CONDOR Semi-Automatique Double bacs – 8 kg lavage – Blanche",
+        "Type": "Électroménager",
+        "Depth (m)": 0.55,
+        "Width (m)": 0.85,
+        "Height (m)": 0.95,
+        "Weight (kg)": 28.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Machine à laver CONDOR TULIPE Semi-Automatique Double bacs – 10.5kg lavage – Blanche",
+        "Type": "Électroménager",
+        "Depth (m)": 0.55,
+        "Width (m)": 0.9,
+        "Height (m)": 1.0,
+        "Weight (kg)": 80,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 100,
+        "Stackable": 1,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Machine à Laver CONDOR TULIPE Semi-Automatique Double bacs – 13kg lavage – Noire",
+        "Type": "Électroménager",
+        "Depth (m)": 0.58,
+        "Width (m)": 0.95,
+        "Height (m)": 1.05,
+        "Weight (kg)": 32.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Machine à laver CONDOR TULIPE Semi-Automatique Double bacs – 13kg lavage – Bleu foncé",
+        "Type": "Électroménager",
+        "Depth (m)": 0.58,
+        "Width (m)": 0.95,
+        "Height (m)": 1.05,
+        "Weight (kg)": 32.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Machine à Laver CONDOR Top loading – 8kg – Gris foncé",
+        "Type": "Électroménager",
+        "Depth (m)": 0.6,
+        "Width (m)": 0.6,
+        "Height (m)": 1.0,
+        "Weight (kg)": 40.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Machine à Laver CONDOR Top loading – 10,5 kg – Darck Silver",
+        "Type": "Électroménager",
+        "Depth (m)": 0.62,
+        "Width (m)": 0.62,
+        "Height (m)": 1.05,
+        "Weight (kg)": 43.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Machine à Laver CONDOR Frontal – 6kg – 1000 tr/min – Blanche",
+        "Type": "Électroménager",
+        "Depth (m)": 0.65,
+        "Width (m)": 0.65,
+        "Height (m)": 0.9,
+        "Weight (kg)": 60.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Machine à Laver NARDI NATA Automatique Top Loading-10,5Kg Lavage-Blanche",
+        "Type": "Électroménager",
+        "Depth (m)": 0.62,
+        "Width (m)": 0.62,
+        "Height (m)": 1.05,
+        "Weight (kg)": 43.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Machine à Laver CONDOR Frontal – 6kg – 1000 tr/min – Grise",
+        "Type": "Électroménager",
+        "Depth (m)": 0.65,
+        "Width (m)": 0.65,
+        "Height (m)": 0.9,
+        "Weight (kg)": 60.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Machine à Laver NARDI NATA Automatique Top Loading-10,5Kg Lavage-Grise",
+        "Type": "Électroménager",
+        "Depth (m)": 0.62,
+        "Width (m)": 0.62,
+        "Height (m)": 1.05,
+        "Weight (kg)": 43.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Machine à Laver HISENSE Automatique Top Loading-11 Kg Lavage – Gris titanium",
+        "Type": "Électroménager",
+        "Depth (m)": 0.62,
+        "Width (m)": 0.62,
+        "Height (m)": 1.05,
+        "Weight (kg)": 44.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Machine à Laver CONDOR LULA Frontal – 8kg – 1400 tr/min – Grise",
+        "Type": "Électroménager",
+        "Depth (m)": 0.65,
+        "Width (m)": 0.65,
+        "Height (m)": 0.9,
+        "Weight (kg)": 68.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Machine à Laver NARDI Automatique Top Loading-8Kg Lavage-Blanche",
+        "Type": "Électroménager",
+        "Depth (m)": 0.6,
+        "Width (m)": 0.6,
+        "Height (m)": 1.0,
+        "Weight (kg)": 40.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Machine à Laver NARDI Frontale-8Kg Lavage à vapeur-1400tr/min-Blanche",
+        "Type": "Électroménager",
+        "Depth (m)": 0.65,
+        "Width (m)": 0.65,
+        "Height (m)": 0.9,
+        "Weight (kg)": 68.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Machine à Laver HISENSE Automatique Top Loading-14 Kg Lavage – Gris titanium",
+        "Type": "Électroménager",
+        "Depth (m)": 0.65,
+        "Width (m)": 0.65,
+        "Height (m)": 1.1,
+        "Weight (kg)": 48.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Machine à laver CONDOR LUCA Frontal -10,5kg -Inverter- 1400 tr/min – Blanche",
+        "Type": "Électroménager",
+        "Depth (m)": 0.68,
+        "Width (m)": 0.68,
+        "Height (m)": 0.9,
+        "Weight (kg)": 73.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Machine à Laver NARDI Frontale-8Kg Lavage à vapeur-1400tr/min-Grise",
+        "Type": "Électroménager",
+        "Depth (m)": 0.65,
+        "Width (m)": 0.65,
+        "Height (m)": 0.9,
+        "Weight (kg)": 68.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Machine à laver HISENSE Frontale – 08KG – inverter – vapeur – 1400tr/min – blanche",
+        "Type": "Électroménager",
+        "Depth (m)": 0.65,
+        "Width (m)": 0.65,
+        "Height (m)": 0.9,
+        "Weight (kg)": 68.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Machine à laver CONDOR LUNA Frontal -10,5kg -lavage à la vapeur – Inverter- 1400 tr/min – Blanche",
+        "Type": "Électroménager",
+        "Depth (m)": 0.68,
+        "Width (m)": 0.68,
+        "Height (m)": 0.9,
+        "Weight (kg)": 73.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Machine à Laver Séchante NARDI 10,5/6kg – 1400tr/min",
+        "Type": "Électroménager",
+        "Depth (m)": 0.68,
+        "Width (m)": 0.68,
+        "Height (m)": 0.9,
+        "Weight (kg)": 75.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Machine à Laver Séchante NARDI Frontale-10,5/6kg-Lavage à vapeur-Inverter-1400tr/min-Grise",
+        "Type": "Électroménager",
+        "Depth (m)": 0.68,
+        "Width (m)": 0.68,
+        "Height (m)": 0.9,
+        "Weight (kg)": 75.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Machine à laver CONDOR LUNA Frontal -12kg -Lavante-Séchante – Inverter- 1500 tr/min – Titanuim",
+        "Type": "Électroménager",
+        "Depth (m)": 0.7,
+        "Width (m)": 0.7,
+        "Height (m)": 0.9,
+        "Weight (kg)": 78.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Machine à laver Hisense top load 20kg / Smart / Inverter",
+        "Type": "Électroménager",
+        "Depth (m)": 0.7,
+        "Width (m)": 0.7,
+        "Height (m)": 1.15,
+        "Weight (kg)": 55.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Lave vaisselle HISENSE – 13 couverts – 08 programmes – Inox",
+        "Type": "Électroménager",
+        "Depth (m)": 0.65,
+        "Width (m)": 0.65,
+        "Height (m)": 0.9,
+        "Weight (kg)": 48.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Lave vaisselle HISENSE – 15 couverts – 08 programmes – Inox",
+        "Type": "Électroménager",
+        "Depth (m)": 0.65,
+        "Width (m)": 0.65,
+        "Height (m)": 0.9,
+        "Weight (kg)": 50.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Lave Vaisselle NARDI Semi encastrable 15 Couverts 07 Programmes-Argent",
+        "Type": "Électroménager",
+        "Depth (m)": 0.65,
+        "Width (m)": 0.65,
+        "Height (m)": 0.9,
+        "Weight (kg)": 50.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Lave Vaisselle NARDI Encastrable 15 Couverts 08 Programmes-Argent",
+        "Type": "Électroménager",
+        "Depth (m)": 0.62,
+        "Width (m)": 0.62,
+        "Height (m)": 0.87,
+        "Weight (kg)": 49.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Lave Vaisselle ROCCA NARDI 14 Couverts 07 Programmes-Blanc",
+        "Type": "Électroménager",
+        "Depth (m)": 0.65,
+        "Width (m)": 0.65,
+        "Height (m)": 0.9,
+        "Weight (kg)": 49.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 0.0,
+        "Stackable": 0,
+        "Stack-Supporting": 0
+    },
+    {
+        "Product": "Blender MOULINEX Blendeo Blender avec broyeur et râpe, 1,5 L, 450 W, blanc –",
+        "Type": "Appareils électroménagers",
+        "Depth (m)": 0.25,
+        "Width (m)": 0.18,
+        "Height (m)": 0.3,
+        "Weight (kg)": 2.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 5.0,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Blender MOULINEX Blendforce 2- 800 W-SILVER-Blender Classique",
+        "Type": "Appareils électroménagers",
+        "Depth (m)": 0.25,
+        "Width (m)": 0.18,
+        "Height (m)": 0.3,
+        "Weight (kg)": 2.2,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 5.0,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Blender MOULINEX BLENDFORCE 600 W-Rouge",
+        "Type": "Appareils électroménagers",
+        "Depth (m)": 0.25,
+        "Width (m)": 0.18,
+        "Height (m)": 0.3,
+        "Weight (kg)": 2.1,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 5.0,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Blender Genuine 550W Avec Moulin à Café et Epices MOULINEX LM241B25",
+        "Type": "Appareils électroménagers",
+        "Depth (m)": 0.26,
+        "Width (m)": 0.19,
+        "Height (m)": 0.32,
+        "Weight (kg)": 2.3,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 5.0,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Blender à commande bouton CONDOR MASTER MIX – 1400 W -1,75L – Noir_Inox",
+        "Type": "Appareils électroménagers",
+        "Depth (m)": 0.3,
+        "Width (m)": 0.2,
+        "Height (m)": 0.35,
+        "Weight (kg)": 3.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 5.0,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Blender à commande bouton CONDOR MASTER MIX – 1400 W -1,75L – Bleu_Inox",
+        "Type": "Appareils électroménagers",
+        "Depth (m)": 0.3,
+        "Width (m)": 0.2,
+        "Height (m)": 0.35,
+        "Weight (kg)": 3.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 5.0,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Moulinex BLENDER SOLEIL IVOIRE 500 W",
+        "Type": "Appareils électroménagers",
+        "Depth (m)": 0.25,
+        "Width (m)": 0.18,
+        "Height (m)": 0.3,
+        "Weight (kg)": 2.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 5.0,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Blender à commande digitale CONDOR MASTER MIX – 1400 W – 9 Vitesses – Noir_Inox",
+        "Type": "Appareils électroménagers",
+        "Depth (m)": 0.3,
+        "Width (m)": 0.2,
+        "Height (m)": 0.35,
+        "Weight (kg)": 3.1,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 5.0,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Moulinex THE GENUINE BLENDER LM242B25",
+        "Type": "Appareils électroménagers",
+        "Depth (m)": 0.26,
+        "Width (m)": 0.19,
+        "Height (m)": 0.32,
+        "Weight (kg)": 2.3,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 5.0,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "SUPERBLENDER EXPERT 700W MOULINEX",
+        "Type": "Appareils électroménagers",
+        "Depth (m)": 0.28,
+        "Width (m)": 0.2,
+        "Height (m)": 0.33,
+        "Weight (kg)": 2.5,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 5.0,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Radiateur A Gaz Butane CRISTOR -4200 W- Mobile – Noir",
+        "Type": "Ventilateurs et climatisation",
+        "Depth (m)": 0.45,
+        "Width (m)": 0.4,
+        "Height (m)": 0.75,
+        "Weight (kg)": 11.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 5.5,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Radiateur A Gaz Butane CRISTOR -4200 W- Mobile – Pliable – Noir",
+        "Type": "Ventilateurs et climatisation",
+        "Depth (m)": 0.45,
+        "Width (m)": 0.4,
+        "Height (m)": 0.75,
+        "Weight (kg)": 10.5,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 5.3,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Radiateur Bain d’huile CRISTOR – 9 éléments – 2000W-noir et blanc",
+        "Type": "Ventilateurs et climatisation",
+        "Depth (m)": 0.5,
+        "Width (m)": 0.18,
+        "Height (m)": 0.65,
+        "Weight (kg)": 9.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 5.0,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Radiateur Bain d’huile Condor | 9 éléments | 2000W",
+        "Type": "Ventilateurs et climatisation",
+        "Depth (m)": 0.5,
+        "Width (m)": 0.18,
+        "Height (m)": 0.65,
+        "Weight (kg)": 9.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 5.0,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Radiateur Bain d’huile CONDOR – 9 éléments – 2000W",
+        "Type": "Ventilateurs et climatisation",
+        "Depth (m)": 0.5,
+        "Width (m)": 0.18,
+        "Height (m)": 0.65,
+        "Weight (kg)": 9.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 5.0,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Radiateur Bain d’huile CRISTOR – 11 éléments -2500W",
+        "Type": "Ventilateurs et climatisation",
+        "Depth (m)": 0.55,
+        "Width (m)": 0.18,
+        "Height (m)": 0.65,
+        "Weight (kg)": 10.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 5.0,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Radiateur Bain d’huile CRISTOR – 11 éléments -2500W-noir et blanc",
+        "Type": "Ventilateurs et climatisation",
+        "Depth (m)": 0.55,
+        "Width (m)": 0.18,
+        "Height (m)": 0.65,
+        "Weight (kg)": 10.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 5.0,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Radiateur Bain d’huile Condor | 11 éléments | 2500W",
+        "Type": "Ventilateurs et climatisation",
+        "Depth (m)": 0.55,
+        "Width (m)": 0.18,
+        "Height (m)": 0.65,
+        "Weight (kg)": 10.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 5.0,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Radiateur Bain d’huile CRISTOR – 13 éléments -2600W-noir et blanc",
+        "Type": "Ventilateurs et climatisation",
+        "Depth (m)": 0.6,
+        "Width (m)": 0.18,
+        "Height (m)": 0.65,
+        "Weight (kg)": 11.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 5.0,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Radiateur Bain d’huile CONDOR – 11 éléments -2500W",
+        "Type": "Ventilateurs et climatisation",
+        "Depth (m)": 0.55,
+        "Width (m)": 0.18,
+        "Height (m)": 0.65,
+        "Weight (kg)": 10.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 5.0,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Radiateur Bain d’huile CONDOR | 13 éléments | 2600W",
+        "Type": "Ventilateurs et climatisation",
+        "Depth (m)": 0.6,
+        "Width (m)": 0.18,
+        "Height (m)": 0.65,
+        "Weight (kg)": 11.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 5.0,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Radiateur Bain d’huile Condor Avec Ventilo | 11 éléments | 2400W",
+        "Type": "Ventilateurs et climatisation",
+        "Depth (m)": 0.55,
+        "Width (m)": 0.18,
+        "Height (m)": 0.65,
+        "Weight (kg)": 10.5,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 5.0,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Hotte Casquette CRISTOR FLORA1 – 60 Cm – Filtres à charbon – 280 m3/h – Noire",
+        "Type": "Ventilateurs et climatisation",
+        "Depth (m)": 0.65,
+        "Width (m)": 0.55,
+        "Height (m)": 0.2,
+        "Weight (kg)": 7.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 3.5,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Hotte Pyramidale CRISTOR FIONA1 – 60 Cm – Filtres à charbon – 300 m3/h – Grise",
+        "Type": "Ventilateurs et climatisation",
+        "Depth (m)": 0.65,
+        "Width (m)": 0.5,
+        "Height (m)": 0.4,
+        "Weight (kg)": 9.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 4.5,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Hotte casquette CONDOR QUARTZ – 60 Cm- Filtre à Charbon – 320 m3/h – Silver",
+        "Type": "Ventilateurs et climatisation",
+        "Depth (m)": 0.65,
+        "Width (m)": 0.55,
+        "Height (m)": 0.2,
+        "Weight (kg)": 7.5,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 3.8,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Hotte Pyramidale CRISTOR FIONA1 – 60 Cm – Filtres à charbon – 300 m3/h – Noire",
+        "Type": "Ventilateurs et climatisation",
+        "Depth (m)": 0.65,
+        "Width (m)": 0.5,
+        "Height (m)": 0.4,
+        "Weight (kg)": 9.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 4.5,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Hotte Pyramidale CRISTOR FIONA1 – 60 Cm – Filtres à charbon – 300 m3/h – Inox",
+        "Type": "Ventilateurs et climatisation",
+        "Depth (m)": 0.65,
+        "Width (m)": 0.5,
+        "Height (m)": 0.4,
+        "Weight (kg)": 9.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 4.5,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Hotte Aspirante CANDY – Casquette – 300 m3/h",
+        "Type": "Ventilateurs et climatisation",
+        "Depth (m)": 0.65,
+        "Width (m)": 0.55,
+        "Height (m)": 0.2,
+        "Weight (kg)": 7.2,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 3.6,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Hotte Aspirante NARDI – Encastrable – Noire – 52 cm",
+        "Type": "Ventilateurs et climatisation",
+        "Depth (m)": 0.55,
+        "Width (m)": 0.35,
+        "Height (m)": 0.3,
+        "Weight (kg)": 8.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 4.0,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Hotte Décorative CRISTOR FABIOLA2 – 60 Cm – Filtres à charbon – 500 m3/h – Tactile – Glass Noir",
+        "Type": "Ventilateurs et climatisation",
+        "Depth (m)": 0.65,
+        "Width (m)": 0.5,
+        "Height (m)": 0.45,
+        "Weight (kg)": 10.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 5.0,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Hotte Aspirante NARDI – Encastrable – Inox – 52 cm",
+        "Type": "Ventilateurs et climatisation",
+        "Depth (m)": 0.55,
+        "Width (m)": 0.35,
+        "Height (m)": 0.3,
+        "Weight (kg)": 8.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 4.0,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Hotte Murale Condor Box LILA 60X / 450m3/h / INOX",
+        "Type": "Ventilateurs et climatisation",
+        "Depth (m)": 0.65,
+        "Width (m)": 0.5,
+        "Height (m)": 0.4,
+        "Weight (kg)": 9.5,
+        "Allowed Orientations": [
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+        ],
+        "LBS (kg)": 4.8,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Cocotte-minute SEB Clipsominut Eco Respect 4,5 L",
+        "Type": "Ustensiles de cuisine",
+        "Depth (m)": 0.4,
+        "Width (m)": 0.3,
+        "Height (m)": 0.25,
+        "Weight (kg)": 3.5,
+        "Allowed Orientations": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+        ],
+        "LBS (kg)": 10.5,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Cocotte-minute SEB Clipsominut Eco Respect 6L-Autocuiseur",
+        "Type": "Ustensiles de cuisine",
+        "Depth (m)": 0.4,
+        "Width (m)": 0.3,
+        "Height (m)": 0.25,
+        "Weight (kg)": 4.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+        ],
+        "LBS (kg)": 12.0,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Cocotte-minute SEB Clipsominut Eco Respect 7,5 L-Autocuiseur",
+        "Type": "Ustensiles de cuisine",
+        "Depth (m)": 0.42,
+        "Width (m)": 0.32,
+        "Height (m)": 0.28,
+        "Weight (kg)": 4.5,
+        "Allowed Orientations": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+        ],
+        "LBS (kg)": 13.5,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Cocotte-minute TEFAL Clipso Minut Easy",
+        "Type": "Ustensiles de cuisine",
+        "Depth (m)": 0.4,
+        "Width (m)": 0.3,
+        "Height (m)": 0.25,
+        "Weight (kg)": 4.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+        ],
+        "LBS (kg)": 12.0,
+        "Stackable": 0,
+        "Stack-Supporting": 1
+    },
+    {
+        "Product": "Cocotte-minute SEB Clipsominut Easy 9L Induction +",
+        "Type": "Ustensiles de cuisine",
+        "Depth (m)": 0.42,
+        "Width (m)": 0.32,
+        "Height (m)": 0.3,
+        "Weight (kg)": 5.0,
+        "Allowed Orientations": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+        ],
+        "LBS (kg)": 15.0,
+        "Stackable": 0,
+        "Stack-Supporting": 1
     }
 ]
